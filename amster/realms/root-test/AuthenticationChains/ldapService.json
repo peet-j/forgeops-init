@@ -9,12 +9,16 @@
   "data" : {
     "_id" : "ldapService",
     "loginFailureUrl" : [ ],
+    "loginPostProcessClass" : [ ],
     "authChainConfiguration" : [ {
       "module" : "DataStore",
       "criteria" : "REQUIRED",
       "options" : { }
+    }, {
+      "module" : "HOTP",
+      "criteria" : "REQUIRED",
+      "options" : { }
     } ],
-    "loginPostProcessClass" : [ ],
     "loginSuccessUrl" : [ ],
     "_type" : {
       "_id" : "EMPTY",

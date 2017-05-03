@@ -23,7 +23,7 @@
     "xmlEncryptionClass" : "com.sun.identity.saml2.xmlenc.FMEncProvider",
     "defaults" : {
       "metadataSigningKeyPass" : null,
-      "metadataSigningKeyPass-encrypted" : "AAAAA0FFUwIQKyKkN+Ko4uYy1BUDK+A429f1k9Glznt6GZapasgxy8OfD3HDQPZtdQ==",
+      "metadataSigningKeyPass-encrypted" : "AAAAA0FFUwIQ6nbX3ixY61HSyl6KP6q2tsFhNFTYySf2oKo/nqbFj9YYfRrd9wz8GQ==",
       "metadataSigningKey" : "test"
     },
     "_type" : {
