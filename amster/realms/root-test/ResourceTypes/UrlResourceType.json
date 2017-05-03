@@ -21,9 +21,9 @@
       "PUT" : true,
       "PATCH" : true
     },
-    "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
-    "creationDate" : 1491321535658,
-    "lastModifiedBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
-    "lastModifiedDate" : 1491321535658
+    "createdBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
+    "creationDate" : 1493826957428,
+    "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
+    "lastModifiedDate" : 1493826957428
   }
 }

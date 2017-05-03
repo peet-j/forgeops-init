@@ -8,7 +8,7 @@
   },
   "data" : {
     "_id" : "157298c0-7d31-4059-a95b-eeb08473b7e5",
-    "lastModifiedDate" : "1491321536370",
+    "lastModifiedDate" : "1493826954717",
     "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
     "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
     "name" : "Device Id (Match) - Client Side",

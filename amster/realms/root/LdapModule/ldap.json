@@ -11,7 +11,7 @@
     "authenticationLevel" : 0,
     "userSearchFilter" : null,
     "userBindPassword" : null,
-    "userBindPassword-encrypted" : "AAAAA0FFUwIQkaqRW1I5y+vKXASiaji39LQ4JR6nGR3mvwn+1MvupMpXy00MnNjlvg==",
+    "userBindPassword-encrypted" : "AAAAA0FFUwIQIjBZbtjTeQAp8RBIiMj1zNhNsir8l57G9RwAtxS7udDQM9LrscvFew==",
     "searchScope" : "SUBTREE",
     "returnUserDN" : true,
     "profileAttributeMappings" : [ ],

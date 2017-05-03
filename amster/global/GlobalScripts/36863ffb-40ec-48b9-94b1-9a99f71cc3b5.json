@@ -8,8 +8,8 @@
   },
   "data" : {
     "_id" : "36863ffb-40ec-48b9-94b1-9a99f71cc3b5",
-    "lastModifiedDate" : "1491321536383",
     "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
+    "lastModifiedDate" : "1493826954734",
     "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
     "name" : "OIDC Claims Script",
     "context" : "OIDC_CLAIMS",

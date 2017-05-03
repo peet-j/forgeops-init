@@ -8,8 +8,8 @@
   },
   "data" : {
     "_id" : "9de3eb62-f131-4fac-a294-7bd170fd4acb",
+    "lastModifiedDate" : "1493826954781",
     "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
-    "lastModifiedDate" : "1491321536445",
     "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
     "context" : "POLICY_CONDITION",
     "name" : "Scripted Policy Condition",
