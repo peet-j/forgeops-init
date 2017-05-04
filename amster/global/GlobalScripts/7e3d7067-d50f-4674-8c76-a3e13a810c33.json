@@ -8,7 +8,7 @@
   },
   "data" : {
     "_id" : "7e3d7067-d50f-4674-8c76-a3e13a810c33",
-    "lastModifiedDate" : "1491321536429",
+    "lastModifiedDate" : "1493826954769",
     "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
     "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
     "name" : "Scripted Module - Server Side",

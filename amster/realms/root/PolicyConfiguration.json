@@ -22,7 +22,7 @@
     "sslEnabled" : false,
     "usersBaseDn" : "dc=openam,dc=forgerock,dc=org",
     "bindPassword" : null,
-    "bindPassword-encrypted" : "AAAAA0FFUwIQE7PhjTmTXRDxWWDsQpwOAeOz9Ige51DmhYPPdDQVdwIExnRcIxz2Ww==",
+    "bindPassword-encrypted" : "AAAAA0FFUwIQ66PiF3Et8YD8/VRQc8pJCsTsxbL6iDIst9ZS71DXfjPc3UislKnA7w==",
     "connectionPoolMaximumSize" : 10,
     "maximumSearchResults" : 100,
     "realmSearchFilter" : "(objectclass=sunismanagedorganization)",

@@ -35,7 +35,7 @@
       "com.sun.identity.crl.cache.directory.ssl" : false,
       "com.sun.identity.crl.cache.directory.user" : "",
       "com.sun.identity.crl.cache.directory.password" : null,
-      "com.sun.identity.crl.cache.directory.password-encrypted" : "AAAAA0FFUwIQjVqRl7uCRgCDp5FbToSXO6MjWCYPxuyZwT3yOyA3oDM=",
+      "com.sun.identity.crl.cache.directory.password-encrypted" : "AAAAA0FFUwIQIXIUlDBhgwFsiBa/pm/l4/kev5XIKD+kIV4EBkOn3VI=",
       "com.sun.identity.crl.cache.directory.searchlocs" : "",
       "com.sun.identity.crl.cache.directory.searchattr" : ""
     },
