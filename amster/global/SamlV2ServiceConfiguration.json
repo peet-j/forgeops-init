@@ -12,7 +12,7 @@
     "encryptedKeyInKeyInfo" : true,
     "cacheCleanupInterval" : 600,
     "nameIDInfoAttribute" : "sun-fm-saml2-nameid-info",
-    "idpDiscoveryCookieDomain" : "",
+    "idpDiscoveryCookieDomain" : "hmcts-idam-fr.northeurope.cloudapp.azure.com",
     "idpDiscoveryUrlSchema" : "https",
     "signingCertValidation" : false,
     "caCertValidation" : false,
@@ -23,7 +23,6 @@
     "xmlEncryptionClass" : "com.sun.identity.saml2.xmlenc.FMEncProvider",
     "defaults" : {
       "metadataSigningKeyPass" : null,
-      "metadataSigningKeyPass-encrypted" : "AAAAA0FFUwIQ6nbX3ixY61HSyl6KP6q2tsFhNFTYySf2oKo/nqbFj9YYfRrd9wz8GQ==",
       "metadataSigningKey" : "test"
     },
     "_type" : {

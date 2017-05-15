@@ -12,10 +12,9 @@
       "oathAttrName" : "oathDeviceProfiles",
       "authenticatorOATHDeviceSettingsEncryptionKeystorePrivateKeyPassword" : null,
       "authenticatorOATHDeviceSettingsEncryptionScheme" : "NONE",
-      "authenticatorOATHDeviceSettingsEncryptionKeystore" : "/root/openam/openam/keystore.jks",
+      "authenticatorOATHDeviceSettingsEncryptionKeystore" : "/home/frock/openam/openam/keystore.jks",
       "authenticatorOATHDeviceSettingsEncryptionKeystoreType" : "JKS",
       "authenticatorOATHDeviceSettingsEncryptionKeystorePassword" : null,
-      "authenticatorOATHDeviceSettingsEncryptionKeystorePassword-encrypted" : "AAAAA0FFUwIQVhyak95pT3u3KWkeZpHq5L/YmSlt3irmeaEQzqeI3Ro8UY1FBgfQAg==",
       "authenticatorOATHDeviceSettingsEncryptionKeystoreKeyPairAlias" : null,
       "authenticatorOATHSkippableName" : "oath2faEnabled"
     },

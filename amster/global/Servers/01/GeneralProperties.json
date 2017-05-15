@@ -3,19 +3,19 @@
     "realm" : null,
     "amsterVersion" : "14.0.0",
     "entityType" : "GeneralProperties",
-    "entityId" : "http://openam:80/openam",
+    "entityId" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
     "pathParams" : {
-      "serverName" : "http://openam:80/openam"
+      "serverName" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
     }
   },
   "data" : {
     "_id" : "01/properties/general",
     "amconfig.header.site" : {
-      "singleChoiceSite" : "site1"
+      "singleChoiceSite" : "[Empty]"
     },
     "amconfig.header.installdir" : {
       "com.iplanet.services.configpath" : {
-        "value" : "/root/openam",
+        "value" : "/home/frock/openam",
         "inherited" : false
       },
       "com.iplanet.am.locale" : {

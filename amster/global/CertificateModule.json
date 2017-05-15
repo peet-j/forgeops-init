@@ -13,7 +13,7 @@
       "certificateAttributeProfileMappingExtension" : "none",
       "matchCertificateToCRL" : false,
       "crlMatchingCertificateAttribute" : "CN",
-      "certificateLdapServers" : [ "configstore-0.configstore:389" ],
+      "certificateLdapServers" : [ "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389" ],
       "ldapCertificateAttribute" : "CN",
       "otherCertificateAttributeToProfileMapping" : null,
       "updateCRLsFromDistributionPoint" : true,

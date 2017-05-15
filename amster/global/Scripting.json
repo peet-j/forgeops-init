@@ -8,7 +8,7 @@
   },
   "data" : {
     "_id" : "",
-    "defaultContext" : "POLICY_CONDITION",
+    "defaultContext" : "OIDC_CLAIMS",
     "_type" : {
       "_id" : "scripting",
       "name" : "Scripting",

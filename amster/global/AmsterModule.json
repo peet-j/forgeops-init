@@ -11,7 +11,7 @@
     "defaults" : {
       "authenticationLevel" : 0,
       "enabled" : true,
-      "authorizedKeys" : "/root/openam/authorized_keys"
+      "authorizedKeys" : "/home/frock/openam/authorized_keys"
     },
     "_type" : {
       "_id" : "amster",

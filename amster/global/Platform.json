@@ -8,7 +8,7 @@
   },
   "data" : {
     "_id" : "",
-    "cookieDomains" : [ ],
+    "cookieDomains" : [ "hmcts-idam-fr.northeurope.cloudapp.azure.com" ],
     "locale" : "en_US",
     "_type" : {
       "_id" : "platform",

@@ -15,11 +15,11 @@
       "msisdnUserNamingAttribute" : "uid",
       "ldapSslEnabled" : false,
       "msisdnRequestSearchLocations" : [ "searchRequest", "searchParam", "searchCookie" ],
-      "ldapProviderUrl" : [ "configstore-0.configstore:389" ],
+      "ldapProviderUrl" : [ "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389" ],
       "msisdnParameterNames" : [ ],
       "ldapUserBindPassword" : null,
       "trustedGatewayIPAddresses" : [ ],
-      "baseSearchDN" : [ "dc=openam,dc=forgerock,dc=org" ],
+      "baseSearchDN" : [ "dc=example,dc=com" ],
       "returnUserDN" : true
     },
     "_type" : {

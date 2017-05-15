@@ -3,9 +3,9 @@
     "realm" : null,
     "amsterVersion" : "14.0.0",
     "entityType" : "SdkProperties",
-    "entityId" : "http://openam:80/openam",
+    "entityId" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
     "pathParams" : {
-      "serverName" : "http://openam:80/openam"
+      "serverName" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
     }
   },
   "data" : {

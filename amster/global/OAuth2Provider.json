@@ -12,7 +12,7 @@
     "blacklistPollInterval" : 60,
     "blacklistPurgeDelay" : 1,
     "agentIdTokenSigningKeyAlias" : "test",
-    "idTokenAuthenticitySecret" : "lGCLmYhSHzyAyruL6jWcTrw9OzHpoxqzeV4Y+TGaRY8=",
+    "idTokenAuthenticitySecret" : "c43HeH9UsP0qvxuq9HYXbpKNw5LyAa0qBQ/r1WuzTd0=",
     "defaults" : {
       "advancedOAuth2Config" : {
         "scopeImplementationClass" : "org.forgerock.openam.oauth2.OpenAMScopeValidator",
@@ -23,7 +23,7 @@
         "tokenSigningECDSAKeyAlias" : [ "ES512|es512test", "ES384|es384test", "ES256|es256test" ],
         "hashSalt" : null,
         "moduleMessageEnabledInPasswordGrant" : false,
-        "tokenSigningHmacSharedSecret" : "ubqXdJuZ3YoGbsl4VAJuBBEaR6O8mZL91wVgjEXsP0E=",
+        "tokenSigningHmacSharedSecret" : "c43HeH9UsP0qvxuq9HYXbpKNw5LyAa0qBQ/r1WuzTd0=",
         "codeVerifierEnforced" : false,
         "tokenSigningAlgorithm" : "HS256",
         "tokenCompressionEnabled" : null,

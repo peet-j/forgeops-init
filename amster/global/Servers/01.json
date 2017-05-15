@@ -8,7 +8,7 @@
   },
   "data" : {
     "_id" : "01",
-    "url" : "http://openam:80/openam",
-    "siteName" : "site1"
+    "url" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
+    "siteName" : null
   }
 }

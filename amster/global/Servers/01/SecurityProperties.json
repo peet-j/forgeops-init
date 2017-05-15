@@ -3,16 +3,16 @@
     "realm" : null,
     "amsterVersion" : "14.0.0",
     "entityType" : "SecurityProperties",
-    "entityId" : "http://openam:80/openam",
+    "entityId" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
     "pathParams" : {
-      "serverName" : "http://openam:80/openam"
+      "serverName" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
     }
   },
   "data" : {
     "_id" : "01/properties/security",
     "amconfig.header.encryption" : {
       "com.iplanet.am.service.secret" : {
-        "value" : "AQICcXwEul/2kAQMkjn99So1Fh/lo3SRWPhh",
+        "value" : "AQICbIkv6BNzbDyHk+vFqCXoqTzfik5jLVb8",
         "inherited" : false
       },
       "com.iplanet.security.encryptor" : {
@@ -89,9 +89,8 @@
       },
       "com.sun.identity.crl.cache.directory.password" : {
         "value" : null,
-        "inherited" : false
+        "inherited" : true
       },
-      "com.sun.identity.crl.cache.directory.password-encrypted" : "AAAAA0FFUwIQ9mCXLZWkMZB7LtfoAO/dRXjn1t+n0zH227d3TheBnK0=",
       "com.sun.identity.crl.cache.directory.searchlocs" : {
         "value" : "",
         "inherited" : true

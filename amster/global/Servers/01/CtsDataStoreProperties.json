@@ -3,20 +3,20 @@
     "realm" : null,
     "amsterVersion" : "14.0.0",
     "entityType" : "CtsDataStoreProperties",
-    "entityId" : "http://openam:80/openam",
+    "entityId" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
     "pathParams" : {
-      "serverName" : "http://openam:80/openam"
+      "serverName" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
     }
   },
   "data" : {
     "_id" : "01/properties/cts",
     "amconfig.org.forgerock.services.cts.store.common.section" : {
       "org.forgerock.services.cts.store.location" : {
-        "value" : "external",
+        "value" : "default",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.root.suffix" : {
-        "value" : "dc=openam,dc=forgerock,dc=org",
+        "value" : "",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.max.connections" : {
@@ -26,28 +26,27 @@
     },
     "amconfig.org.forgerock.services.cts.store.external.section" : {
       "org.forgerock.services.cts.store.ssl.enabled" : {
-        "value" : false,
+        "value" : "",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.directory.name" : {
-        "value" : "ctsstore-0.ctsstore:389",
+        "value" : "",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.loginid" : {
-        "value" : "cn=Directory Manager",
+        "value" : "",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.password" : {
         "value" : null,
-        "inherited" : false
+        "inherited" : true
       },
-      "org.forgerock.services.cts.store.password-encrypted" : "AAAAA0FFUwIQkFfcGsrSNpWwV2tHbc4Cph3Vpkf5Yylto97Y17eRQxAzpfEynlKkpg==",
       "org.forgerock.services.cts.store.heartbeat" : {
         "value" : "10",
         "inherited" : true
       },
       "org.forgerock.services.cts.store.affinity.enabled" : {
-        "value" : false,
+        "value" : null,
         "inherited" : true
       }
     }

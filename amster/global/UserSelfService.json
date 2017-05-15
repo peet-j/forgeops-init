@@ -32,30 +32,30 @@
         "forgottenUsernameServiceConfigClass" : "org.forgerock.openam.selfservice.config.flows.ForgottenUsernameConfigProvider",
         "userRegistrationServiceConfigClass" : "org.forgerock.openam.selfservice.config.flows.UserRegistrationConfigProvider",
         "forgottenPasswordServiceConfigClass" : "org.forgerock.openam.selfservice.config.flows.ForgottenPasswordConfigProvider",
-        "forgottenPasswordConfirmationUrl" : "http://openam:80/openam/XUI/?realm=${realm}#passwordReset/",
-        "userRegistrationConfirmationUrl" : "http://openam:80/openam/XUI/?realm=${realm}#register/"
+        "forgottenPasswordConfirmationUrl" : "",
+        "userRegistrationConfirmationUrl" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
       },
       "generalConfig" : {
         "minimumAnswersToDefine" : 1,
-        "captchaSiteKey" : null,
-        "signingSecretKeyAlias" : null,
-        "encryptionKeyPairAlias" : null,
+        "captchaSiteKey" : "",
+        "signingSecretKeyAlias" : "selfservicesigntest",
+        "encryptionKeyPairAlias" : "selfserviceenctest",
         "minimumAnswersToVerify" : 1,
-        "captchaSecretKey" : null,
-        "captchaVerificationUrl" : "https://www.google.com/recaptcha/api/siteverify",
-        "kbaQuestions" : [ "4|en|What is your mother's maiden name?", "3|en|What was the name of your childhood pet?", "2|en|What was the model of your first car?", "1|en|What is the name of your favourite restaurant?" ],
-        "validQueryAttributes" : [ "uid", "mail", "givenName", "sn" ]
+        "captchaSecretKey" : "",
+        "captchaVerificationUrl" : "",
+        "kbaQuestions" : [ "01|en|Favourite colour?" ],
+        "validQueryAttributes" : [ ]
       },
       "userRegistration" : {
         "userRegistrationKbaEnabled" : false,
-        "userRegistrationEmailVerificationEnabled" : true,
-        "userRegistrationEmailBody" : [ "en|<h2>Click on this <a href=\"%link%\">link</a> to register.</h2>" ],
+        "userRegistrationEmailVerificationEnabled" : false,
+        "userRegistrationEmailBody" : [ "en|Welcome new user" ],
         "userRegisteredDestination" : "default",
-        "userRegistrationEnabled" : false,
-        "userRegistrationTokenTTL" : 900,
-        "userRegistrationEmailSubject" : [ "en|Registration email" ],
+        "userRegistrationEnabled" : true,
+        "userRegistrationTokenTTL" : 60,
+        "userRegistrationEmailSubject" : [ "en|User registration" ],
         "userRegistrationCaptchaEnabled" : false,
-        "userRegistrationValidUserAttributes" : [ "userPassword", "mail", "kbaInfo", "givenName", "inetUserStatus", "sn", "username" ]
+        "userRegistrationValidUserAttributes" : [ "userPassword", "givenName", "inetUserStatus", "sn", "email", "username" ]
       },
       "profileManagement" : {
         "profileProtectedUserAttributes" : [ ]

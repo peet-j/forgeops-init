@@ -10,9 +10,8 @@
     "_id" : "",
     "defaults" : {
       "authenticatorPushDeviceSettingsEncryptionKeystoreKeyPairAlias" : null,
-      "authenticatorPushDeviceSettingsEncryptionKeystore" : "/root/openam/openam/keystore.jks",
+      "authenticatorPushDeviceSettingsEncryptionKeystore" : "/home/frock/openam/openam/keystore.jks",
       "authenticatorPushDeviceSettingsEncryptionKeystorePassword" : null,
-      "authenticatorPushDeviceSettingsEncryptionKeystorePassword-encrypted" : "AAAAA0FFUwIQ9J8SAjKT3bzG8WyLKYMQ20VUggpewHffLSn30OOyyEQzzxi7i1vTjw==",
       "authenticatorPushDeviceSettingsEncryptionKeystorePrivateKeyPassword" : null,
       "pushAttrName" : "pushDeviceProfiles",
       "authenticatorPushDeviceSettingsEncryptionKeystoreType" : "JKS",

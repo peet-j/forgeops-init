@@ -10,14 +10,14 @@
     "_id" : "",
     "defaults" : {
       "emailAddressAttribute" : "mail",
-      "message" : null,
+      "message" : "",
       "port" : 465,
       "password" : null,
-      "from" : null,
-      "hostname" : null,
-      "username" : null,
+      "from" : "hmcts@hmcts.net",
+      "hostname" : "smtp.gmail.com",
+      "username" : "",
       "sslState" : "SSL",
-      "subject" : null,
+      "subject" : "HMCTS no reply",
       "emailImplClassName" : "org.forgerock.openam.services.email.MailServerImpl"
     },
     "_type" : {

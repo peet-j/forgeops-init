@@ -11,6 +11,6 @@
     "parentPath" : null,
     "active" : true,
     "name" : "/",
-    "aliases" : [ "openam.example.com", "openam" ]
+    "aliases" : [ "hmcts-idam-fr.northeurope.cloudapp.azure.com", "example" ]
   }
 }
