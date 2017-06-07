@@ -21,27 +21,30 @@
                     "queryOnResource" : "repo/internal/user",
                     "username" : "anonymous",
                     "password" : "anonymous",
-                    "defaultUserRoles" : [ "openidm-reg" ]
+                    "defaultUserRoles" : [
+                        "openidm-reg"
+                    ]
                 },
                 "enabled" : true
             },
             {
-                "name" : "MANAGED_USER",
+                "enabled" : true,
                 "properties" : {
-                    "augmentSecurityContext": {
+                    "queryOnResource" : "managed/user",
+                    "queryId" : "credential-query",
+                    "defaultUserRoles" : [ ],
+                    "augmentSecurityContext" : {
                         "type" : "text/javascript",
+                        "globals" : { },
                         "source" : "require('auth/customAuthz').setProtectedAttributes(security)"
                     },
-                    "queryId" : "credential-query",
-                    "queryOnResource" : "managed/user",
                     "propertyMapping" : {
                         "authenticationId" : "username",
                         "userCredential" : "password",
                         "userRoles" : "authzRoles"
-                    },
-                    "defaultUserRoles" : [ ]
+                    }
                 },
-                "enabled" : false
+                "name" : "MANAGED_USER"
             },
             {
                 "name" : "INTERNAL_USER",
@@ -57,31 +60,36 @@
                 },
                 "enabled" : true
             },
-            {   "name" : "CLIENT_CERT",
+            {
+                "name" : "CLIENT_CERT",
                 "properties" : {
                     "queryOnResource" : "security/truststore",
-                    "defaultUserRoles" : [ "openidm-cert" ],
+                    "defaultUserRoles" : [
+                        "openidm-cert"
+                    ],
                     "allowedAuthenticationIdPatterns" : [ ]
                 },
                 "enabled" : true
             },
             {
-                "name" : "PASSTHROUGH",
+                "enabled" : true,
                 "properties" : {
-                    "augmentSecurityContext": {
-                        "type" : "text/javascript",
-                        "file" : "auth/populateAsManagedUser.js"
-                    },
                     "queryOnResource" : "system/ldap/account",
-                    "propertyMapping" : {
-                        "authenticationId" : "uid"
-                    },
-                    "managedUserLink" : "systemLdapAccounts_managedUser",
                     "defaultUserRoles" : [
                         "openidm-authorized"
-                    ]
+                    ],
+                    "managedUserLink" : "systemLdapAccounts_managedUser",
+                    "augmentSecurityContext" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "file" : "auth/populateAsManagedUser.js"
+                    },
+                    "propertyMapping" : {
+                        "authenticationId" : "uid",
+                        "userRoles" : "authzRoles"
+                    }
                 },
-                "enabled" : true
+                "name" : "PASSTHROUGH"
             }
         ]
     }

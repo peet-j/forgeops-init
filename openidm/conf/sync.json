@@ -23,12 +23,7 @@
                 },
                 {
                     "source" : "telephoneNumber",
-                    "target" : "telephoneNumber",
-                    "condition" : {
-                        "type" : "text/javascript",
-                        "globals" : { },
-                        "source" : "!!object.telephoneNumber"
-                    }
+                    "target" : "telephoneNumber"
                 },
                 {
                     "source" : "sn",
@@ -37,6 +32,10 @@
                 {
                     "source" : "uid",
                     "target" : "userName"
+                },
+                {
+                    "source" : "ldapGroups",
+                    "target" : "ldapGroups"
                 }
             ],
             "policies" : [
@@ -72,17 +71,14 @@
                     "situation" : "UNASSIGNED",
                     "action" : "IGNORE"
                 }
-            ]
+            ],
+            "enableSync" : false
         },
         {
             "name" : "managedUser_systemLdapAccounts",
             "source" : "managed/user",
             "target" : "system/ldap/account",
             "links" : "systemLdapAccounts_managedUser",
-            "onCreate" : {
-                "type" : "text/javascript",
-                "source" : "target.dn = 'uid=' + source.userName + ',ou=People,dc=openam,dc=forgerock,dc=org';"
-            },
             "properties" : [
                 {
                     "source" : "givenName",
@@ -117,16 +113,18 @@
                     "target" : "mail"
                 },
                 {
-                    "source" : "password",
                     "condition" : {
                         "type" : "text/javascript",
+                        "globals" : { },
                         "source" : "object.password != null"
                     },
                     "transform" : {
                         "type" : "text/javascript",
-                        "source" : "openidm.decrypt(source);"
+                        "globals" : { },
+                        "source" : "logger.error(\"Parameter is: {}\", source);\nlogger.error(\"Is encrypted: {}\", openidm.isEncrypted(source));\nopenidm.decrypt(source);"
                     },
-                    "target" : "userPassword"
+                    "target" : "userPassword",
+                    "source" : "password"
                 },
                 {
                     "source" : "telephoneNumber",
@@ -135,8 +133,16 @@
                         "type" : "text/javascript",
                         "source" : "!!object.telephoneNumber"
                     }
+                },
+                {
+                    "source" : "ldapGroups",
+                    "target" : "ldapGroups"
                 }
             ],
+            "onCreate" : {
+                "type" : "text/javascript",
+                "source" : "target.dn = 'uid=' + source.userName + ',ou=People,dc=example,dc=com';"
+            },
             "policies" : [
                 {
                     "situation" : "CONFIRMED",
@@ -170,7 +176,8 @@
                     "situation" : "UNASSIGNED",
                     "action" : "IGNORE"
                 }
-            ]
+            ],
+            "enableSync" : false
         }
     ]
 }

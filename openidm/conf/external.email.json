@@ -1,0 +1,25 @@
+{
+    "host" : "smtp.gmail.com",
+    "port" : "587",
+    "auth" : {
+        "enable" : true,
+        "username" : "amido.idam@gmail.com",
+        "password" : {
+            "$crypto" : {
+                "type" : "x-simple-encryption",
+                "value" : {
+                    "cipher" : "AES/CBC/PKCS5Padding",
+                    "salt" : "TvfR3ltDnfvF395KrTeBUg==",
+                    "data" : "6dNOZHTVVhWcUhrbvt1dxA==",
+                    "iv" : "T94BelnznPFQq3PZOgyedg==",
+                    "key" : "openidm-sym-default",
+                    "mac" : "DoGQD1A1mpfBjpC3hUWNTg=="
+                }
+            }
+        }
+    },
+    "starttls" : {
+        "enable" : true
+    },
+    "from" : "amido.idam@gmail.com"
+}
