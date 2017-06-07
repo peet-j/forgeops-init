@@ -20,6 +20,7 @@
             "verificationLinkToken" : "%link%",
             "verificationLink" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:18080/#register/"
         },
+	{ "class" : "com.amido.forgerock.selfservice.stage.user.UserInfoConfig" },
         {
             "name" : "selfRegistration",
             "identityServiceUrl" : "managed/user"
