@@ -6,8 +6,8 @@
         "connectorName" : "org.identityconnectors.ldap.LdapConnector"
     },
     "configurationProperties" : {
-        "host" : "userstore-0.userstore",
-        "port" : 389,
+        "host" : "hmcts-idam-fr.northeurope.cloudapp.azure.com",
+        "port" : "1389",
         "ssl" : false,
         "principal" : "cn=Directory Manager",
         "credentials" : {
@@ -15,22 +15,18 @@
                 "type" : "x-simple-encryption",
                 "value" : {
                     "cipher" : "AES/CBC/PKCS5Padding",
-                    "salt" : "JTkP1a7h66LO0oQOMmNKeA==",
-                    "data" : "sb8nDg29uzqlF/tt+VIQAw==",
-                    "iv" : "cb7U2NGQHowyHBaQMI+rzQ==",
+                    "salt" : "8PIfVUR/UB4RzdvaOONUGQ==",
+                    "data" : "SO1PJdrTMpjxo0XXelD4RA==",
+                    "iv" : "xOL/TrwUU5NmLj6JddQwvw==",
                     "key" : "openidm-sym-default",
-                    "mac" : "4yIOzAAI7AhDSR2qNW4r5g=="
+                    "mac" : "4O5Qqomg6NwNLOnXrZV/ZQ=="
                 }
             }
         },
-        "baseContexts" : [
-            "dc=openam,dc=forgerock,dc=org"
-        ],
         "accountSearchFilter" : null,
         "accountSynchronizationFilter" : null,
         "groupSearchFilter" : null,
         "groupSynchronizationFilter" : null,
-        "passwordAttributeToSynchronize" : null,
         "synchronizePasswords" : false,
         "removeLogEntryObjectClassFromFilter" : true,
         "modifiersNamesToFilterOut" : [ ],
@@ -48,7 +44,7 @@
         "useBlocks" : false,
         "maintainPosixGroupMembership" : false,
         "failover" : [ ],
-        "readSchema" : false,
+        "readSchema" : true,
         "accountObjectClasses" : [
             "top",
             "person",
@@ -59,14 +55,17 @@
             "uid"
         ],
         "groupMemberAttribute" : "uniqueMember",
-        "passwordHashAlgorithm" : null,
         "usePagedResultControl" : true,
         "blockSize" : 100,
-        "uidAttribute" : "dn",
+        "uidAttribute" : "uid",
         "maintainLdapGroupMembership" : false,
         "respectResourcePasswordPolicyChangeAfterReset" : false,
+        "baseContexts" : [
+            "dc=example,dc=com"
+        ],
+        "passwordAttributeToSynchronize" : "password",
         "baseContextsToSynchronize" : [
-            "dc=openam,dc=forgerock,dc=org"
+            "dc=example,dc=com"
         ]
     },
     "resultsHandlerConfig" : {
@@ -179,26 +178,18 @@
                 },
                 "aliasList" : {
                     "type" : "array",
-                    "items" : {
-                        "type" : "string",
-                        "nativeType" : "string"
-                    },
                     "nativeType" : "string",
                     "nativeName" : "iplanet-am-user-alias-list",
                     "required" : false
                 },
                 "objectClass" : {
                     "type" : "array",
-                    "items" : {
-                        "type" : "string",
-                        "nativeType" : "string"
-                    },
                     "nativeType" : "string",
                     "nativeName" : "objectClass",
                     "required" : false
                 },
                 "kbaInfo" : {
-                    "type" : "string",
+                    "type" : "array",
                     "nativeType" : "string",
                     "nativeName" : "kbaInfo",
                     "required" : false

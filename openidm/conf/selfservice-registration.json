@@ -1,0 +1,37 @@
+{
+    "stageConfigs" : [
+        {
+            "name" : "userDetails",
+            "identityEmailField" : "mail"
+        },
+        {
+            "name" : "emailValidation",
+            "identityEmailField" : "mail",
+            "emailServiceUrl" : "external/email",
+            "from" : "info@admin.org",
+            "subject" : "Register new account",
+            "mimeType" : "text/html",
+            "subjectTranslations" : {
+                "en" : "Register new account"
+            },
+            "messageTranslations" : {
+                "en" : "<h3>This is your registration email.</h3><h4><a href=\"%link%\">Email verification link</a></h4>"
+            },
+            "verificationLinkToken" : "%link%",
+            "verificationLink" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:18080/#register/"
+        },
+	{ "class" : "com.amido.forgerock.selfservice.stage.user.UserInfoConfig" },
+        {
+            "name" : "selfRegistration",
+            "identityServiceUrl" : "managed/user"
+        }
+    ],
+    "snapshotToken" : {
+        "type" : "jwt",
+        "jweAlgorithm" : "RSAES_PKCS1_V1_5",
+        "encryptionMethod" : "A128CBC_HS256",
+        "jwsAlgorithm" : "HS256",
+        "tokenExpiry" : "1800"
+    },
+    "storage" : "stateless"
+}
