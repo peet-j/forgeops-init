@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/openidm",
+    "amsterVersion" : "14.0.0",
+    "entityType" : "FederationModule",
+    "entityId" : "Federation",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "Federation",
+    "authenticationLevel" : 0,
+    "_type" : {
+      "_id" : "federation",
+      "name" : "Federation",
+      "collection" : true
+    }
+  }
+}

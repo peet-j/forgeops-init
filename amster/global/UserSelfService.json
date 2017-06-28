@@ -11,12 +11,12 @@
     "defaults" : {
       "forgottenPassword" : {
         "forgottenPasswordCaptchaEnabled" : false,
-        "forgottenPasswordEnabled" : false,
-        "forgottenPasswordEmailVerificationEnabled" : true,
-        "forgottenPasswordEmailSubject" : [ "en|Forgotten password email" ],
+        "forgottenPasswordEnabled" : true,
+        "forgottenPasswordEmailVerificationEnabled" : false,
+        "forgottenPasswordEmailSubject" : [ "en|test" ],
         "forgottenPasswordKbaEnabled" : false,
-        "forgottenPasswordEmailBody" : [ "en|<h2>Click on this <a href=\"%link%\">link</a> to reset your password.</h2>" ],
-        "forgottenPasswordTokenTTL" : 900
+        "forgottenPasswordEmailBody" : [ "en|body" ],
+        "forgottenPasswordTokenTTL" : 120
       },
       "forgottenUsername" : {
         "forgottenUsernameKbaEnabled" : false,
@@ -36,15 +36,15 @@
         "userRegistrationConfirmationUrl" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
       },
       "generalConfig" : {
-        "minimumAnswersToDefine" : 1,
+        "minimumAnswersToDefine" : 0,
         "captchaSiteKey" : "",
         "signingSecretKeyAlias" : "selfservicesigntest",
         "encryptionKeyPairAlias" : "selfserviceenctest",
-        "minimumAnswersToVerify" : 1,
+        "minimumAnswersToVerify" : 0,
         "captchaSecretKey" : "",
         "captchaVerificationUrl" : "",
-        "kbaQuestions" : [ "01|en|Favourite colour?" ],
-        "validQueryAttributes" : [ ]
+        "kbaQuestions" : [ "1|en|lala" ],
+        "validQueryAttributes" : [ "uid", "mail" ]
       },
       "userRegistration" : {
         "userRegistrationKbaEnabled" : false,

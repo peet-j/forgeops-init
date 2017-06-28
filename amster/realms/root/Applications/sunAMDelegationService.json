@@ -10,6 +10,7 @@
     "_id" : "sunAMDelegationService",
     "createdBy" : "id=dsameuser,ou=user,dc=example,dc=com",
     "conditions" : [ ],
+    "resourceTypeUuids" : [ "20a13582-1f32-4f83-905f-f71ff4e2e00d" ],
     "subjects" : [ "NOT", "OR", "AuthenticatedUsers", "AND", "Identity" ],
     "saveIndex" : null,
     "searchIndex" : null,
@@ -21,7 +22,6 @@
     "lastModifiedBy" : "id=amadmin,ou=user,dc=example,dc=com",
     "editable" : true,
     "applicationType" : "sunAMDelegationService",
-    "resourceTypeUuids" : [ "20a13582-1f32-4f83-905f-f71ff4e2e00d" ],
     "displayName" : "Delegation Policy Set",
     "description" : null,
     "name" : "sunAMDelegationService"

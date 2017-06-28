@@ -12,16 +12,16 @@
     "_id" : "01/properties/uma",
     "amconfig.org.forgerock.services.resourcesets.store.common.section" : {
       "org.forgerock.services.resourcesets.store.location" : {
-        "value" : "default",
-        "inherited" : true
+        "value" : "external",
+        "inherited" : false
       },
       "org.forgerock.services.resourcesets.store.root.suffix" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "dc=uma-rs,dc=example,dc=com",
+        "inherited" : false
       },
       "org.forgerock.services.resourcesets.store.max.connections" : {
         "value" : "10",
-        "inherited" : true
+        "inherited" : false
       }
     },
     "amconfig.org.forgerock.services.resourcesets.store.external.section" : {
@@ -30,16 +30,16 @@
         "inherited" : true
       },
       "org.forgerock.services.resourcesets.store.directory.name" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389",
+        "inherited" : false
       },
       "org.forgerock.services.resourcesets.store.loginid" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "cn=Directory Manager",
+        "inherited" : false
       },
       "org.forgerock.services.resourcesets.store.password" : {
         "value" : null,
-        "inherited" : true
+        "inherited" : false
       },
       "org.forgerock.services.resourcesets.store.heartbeat" : {
         "value" : "10",
@@ -48,12 +48,12 @@
     },
     "amconfig.org.forgerock.services.umaaudit.store.common.section" : {
       "org.forgerock.services.umaaudit.store.location" : {
-        "value" : "default",
-        "inherited" : true
+        "value" : "external",
+        "inherited" : false
       },
       "org.forgerock.services.umaaudit.store.root.suffix" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "dc=uma-rs ,dc=example,dc=com",
+        "inherited" : false
       },
       "org.forgerock.services.umaaudit.store.max.connections" : {
         "value" : "10",
@@ -66,16 +66,16 @@
         "inherited" : true
       },
       "org.forgerock.services.umaaudit.store.directory.name" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389",
+        "inherited" : false
       },
       "org.forgerock.services.umaaudit.store.loginid" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "cn=Directory Manager",
+        "inherited" : false
       },
       "org.forgerock.services.umaaudit.store.password" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "password",
+        "inherited" : false
       },
       "org.forgerock.services.umaaudit.store.heartbeat" : {
         "value" : "10",
@@ -84,12 +84,12 @@
     },
     "amconfig.org.forgerock.services.uma.pendingrequests.store.common.section" : {
       "org.forgerock.services.uma.pendingrequests.store.location" : {
-        "value" : "default",
-        "inherited" : true
+        "value" : "external",
+        "inherited" : false
       },
       "org.forgerock.services.uma.pendingrequests.store.root.suffix" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "dc=uma-rs,dc=example,dc=com",
+        "inherited" : false
       },
       "org.forgerock.services.uma.pendingrequests.store.max.connections" : {
         "value" : "10",
@@ -102,16 +102,16 @@
         "inherited" : true
       },
       "org.forgerock.services.uma.pendingrequests.store.directory.name" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389",
+        "inherited" : false
       },
       "org.forgerock.services.uma.pendingrequests.store.loginid" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "cn=Directory Manager",
+        "inherited" : false
       },
       "org.forgerock.services.uma.pendingrequests.store.password" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "password",
+        "inherited" : false
       },
       "org.forgerock.services.uma.pendingrequests.store.heartbeat" : {
         "value" : "10",
@@ -120,12 +120,12 @@
     },
     "amconfig.org.forgerock.services.uma.labels.store.common.section" : {
       "org.forgerock.services.uma.labels.store.location" : {
-        "value" : "default",
-        "inherited" : true
+        "value" : "external",
+        "inherited" : false
       },
       "org.forgerock.services.uma.labels.store.root.suffix" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "dc=uma-rs,dc=example,dc=com",
+        "inherited" : false
       },
       "org.forgerock.services.uma.labels.store.max.connections" : {
         "value" : "2",
@@ -138,16 +138,16 @@
         "inherited" : true
       },
       "org.forgerock.services.uma.labels.store.directory.name" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "hmcts-idam-fr.northeurope.cloudapp.azure.com:1389",
+        "inherited" : false
       },
       "org.forgerock.services.uma.labels.store.loginid" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "cn=Directory Manager",
+        "inherited" : false
       },
       "org.forgerock.services.uma.labels.store.password" : {
-        "value" : "",
-        "inherited" : true
+        "value" : "password",
+        "inherited" : false
       },
       "org.forgerock.services.uma.labels.store.heartbeat" : {
         "value" : "10",

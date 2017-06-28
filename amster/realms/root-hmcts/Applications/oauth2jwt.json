@@ -1,29 +1,29 @@
 {
   "metadata" : {
-    "realm" : "/",
+    "realm" : "/hmcts",
     "amsterVersion" : "14.0.0",
     "entityType" : "Applications",
-    "entityId" : "OAuth2",
+    "entityId" : "oauth2jwt",
     "pathParams" : { }
   },
   "data" : {
-    "_id" : "OAuth2",
-    "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
+    "_id" : "oauth2jwt",
+    "createdBy" : "id=amAdmin,ou=user,dc=example,dc=com",
     "conditions" : [ "LEAuthLevel", "Policy", "Script", "AuthenticateToService", "SimpleTime", "AMIdentityMembership", "OR", "IPv6", "IPv4", "SessionProperty", "AuthScheme", "AuthLevel", "NOT", "AuthenticateToRealm", "AND", "ResourceEnvIP", "LDAPFilter", "OAuth2Scope", "Session" ],
-    "resourceTypeUuids" : [ "166daac9-4c68-4622-b27a-71a36b492deb" ],
+    "resourceTypeUuids" : [ "95b26b22-aa1a-471b-aa10-28ffa97440aa" ],
     "subjects" : [ "Policy", "NOT", "OR", "JwtClaim", "AuthenticatedUsers", "AND", "Identity", "NONE" ],
     "saveIndex" : null,
     "searchIndex" : null,
     "entitlementCombiner" : "DenyOverride",
     "resourceComparator" : null,
     "attributeNames" : [ ],
-    "creationDate" : 1486673470537,
-    "lastModifiedDate" : 1494943295082,
-    "lastModifiedBy" : "id=amadmin,ou=user,dc=example,dc=com",
+    "creationDate" : 1496228191800,
+    "lastModifiedDate" : 1496228191800,
+    "lastModifiedBy" : "id=amAdmin,ou=user,dc=example,dc=com",
     "editable" : true,
     "applicationType" : "iPlanetAMWebAgentService",
-    "displayName" : null,
+    "displayName" : "oauth2jwt",
     "description" : null,
-    "name" : "OAuth2"
+    "name" : "oauth2jwt"
   }
 }

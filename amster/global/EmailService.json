@@ -13,11 +13,11 @@
       "message" : "",
       "port" : 465,
       "password" : null,
-      "from" : "hmcts@hmcts.net",
+      "from" : "﻿amido.idam@gmail.com",
       "hostname" : "smtp.gmail.com",
-      "username" : "",
+      "username" : "﻿amido.idam@gmail.com",
       "sslState" : "SSL",
-      "subject" : "HMCTS no reply",
+      "subject" : "HMCTS Idam",
       "emailImplClassName" : "org.forgerock.openam.services.email.MailServerImpl"
     },
     "_type" : {

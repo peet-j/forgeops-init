@@ -10,6 +10,7 @@
     "_id" : "OAuth2",
     "createdBy" : "id=dsameuser,ou=user,dc=example,dc=com",
     "conditions" : [ "LEAuthLevel", "Policy", "Script", "AuthenticateToService", "SimpleTime", "AMIdentityMembership", "OR", "IPv6", "IPv4", "SessionProperty", "AuthScheme", "AuthLevel", "NOT", "AuthenticateToRealm", "AND", "ResourceEnvIP", "LDAPFilter", "OAuth2Scope", "Session" ],
+    "resourceTypeUuids" : [ "95b26b22-aa1a-471b-aa10-28ffa97440aa" ],
     "subjects" : [ "Policy", "NOT", "OR", "JwtClaim", "AuthenticatedUsers", "AND", "Identity", "NONE" ],
     "saveIndex" : null,
     "searchIndex" : null,
@@ -21,7 +22,6 @@
     "lastModifiedBy" : "id=amadmin,ou=user,dc=example,dc=com",
     "editable" : true,
     "applicationType" : "iPlanetAMWebAgentService",
-    "resourceTypeUuids" : [ "95b26b22-aa1a-471b-aa10-28ffa97440aa" ],
     "displayName" : null,
     "description" : null,
     "name" : "OAuth2"

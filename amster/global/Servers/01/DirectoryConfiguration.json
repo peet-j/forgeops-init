@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "14.0.0",
+    "entityType" : "DirectoryConfiguration",
+    "entityId" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam",
+    "pathParams" : {
+      "serverName" : "http://hmcts-idam-fr.northeurope.cloudapp.azure.com:8080/openam"
+    }
+  },
+  "data" : {
+    "_id" : "01/properties/directoryConfiguration",
+    "directoryConfiguration" : {
+      "minConnectionPool" : 1,
+      "maxConnectionPool" : 10,
+      "bindDn" : "cn=Directory Manager",
+      "bindPassword" : null
+    },
+    "directoryServers" : [ {
+      "hostName" : "hmcts-idam-fr.northeurope.cloudapp.azure.com",
+      "serverName" : "Server1",
+      "connectionType" : "SIMPLE",
+      "portNumber" : "1389"
+    } ]
+  }
+}
