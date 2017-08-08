@@ -22,10 +22,6 @@
                     "target" : "mail"
                 },
                 {
-                    "source" : "telephoneNumber",
-                    "target" : "telephoneNumber"
-                },
-                {
                     "source" : "sn",
                     "target" : "sn"
                 },
@@ -72,7 +68,7 @@
                     "action" : "IGNORE"
                 }
             ],
-            "enableSync" : false
+            "enableSync" : true
         },
         {
             "name" : "managedUser_systemLdapAccounts",
@@ -121,7 +117,7 @@
                     "transform" : {
                         "type" : "text/javascript",
                         "globals" : { },
-                        "source" : "logger.error(\"Parameter is: {}\", source);\nlogger.error(\"Is encrypted: {}\", openidm.isEncrypted(source));\nopenidm.decrypt(source);"
+                        "source" : "//logger.error(\"Parameter is: {}\", source);\n//logger.error(\"Is encrypted: {}\", openidm.isEncrypted(source));\nopenidm.decrypt(source);"
                     },
                     "target" : "userPassword",
                     "source" : "password"
@@ -177,7 +173,7 @@
                     "action" : "IGNORE"
                 }
             ],
-            "enableSync" : false
+            "enableSync" : true
         }
     ]
 }

@@ -118,11 +118,6 @@
                         "viewable" : false,
                         "searchable" : false,
                         "userEditable" : true,
-                        "encryption" : {
-                                "key" : "openidm-sym-default"
-			},
-   			"scope" : "private",
-			"isProtected" : "true",
                         "policies" : [
                             {
                                 "policyId" : "at-least-X-capitals",
@@ -150,7 +145,11 @@
                         "returnByDefault" : false,
                         "minLength" : null,
                         "pattern" : "",
-                        "type" : "string"
+                        "type" : "string",
+                        "encryption" : {
+                            "key" : "openidm-sym-default"
+                        },
+                        "scope" : "private"
                     },
                     "givenName" : {
                         "description" : "",
@@ -208,17 +207,14 @@
                     "telephoneNumber" : {
                         "description" : "",
                         "title" : "Mobile Phone",
-                        "viewable" : true,
+                        "viewable" : false,
                         "searchable" : false,
-                        "userEditable" : true,
+                        "userEditable" : false,
                         "policies" : [ ],
                         "returnByDefault" : false,
                         "minLength" : null,
                         "pattern" : "",
-                        "type" : [
-                            "string",
-                            "null"
-                        ]
+                        "type" : "string"
                     },
                     "postalAddress" : {
                         "description" : "",
@@ -297,7 +293,7 @@
                         "title" : "Provisioning Roles",
                         "viewable" : true,
                         "searchable" : false,
-                        "userEditable" : false,
+                        "userEditable" : true,
                         "policies" : [ ],
                         "returnByDefault" : false,
                         "minLength" : null,
@@ -307,7 +303,7 @@
                             "type" : "relationship",
                             "reverseRelationship" : true,
                             "reversePropertyName" : "members",
-                            "validate" : true,
+                            "validate" : false,
                             "properties" : {
                                 "_ref" : {
                                     "type" : "string"
@@ -643,33 +639,6 @@
                                 "questionId"
                             ]
                         }
-                    },
-                    "preferences" : {
-                        "description" : "",
-                        "title" : "Preferences",
-                        "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "object",
-                        "properties" : {
-                            "updates" : {
-                                "description" : "Send me news and updates",
-                                "type" : "boolean"
-                            },
-                            "marketing" : {
-                                "description" : "Send me special offers and services",
-                                "type" : "boolean"
-                            }
-                        },
-                        "required" : [ ],
-                        "order" : [
-                            "updates",
-                            "marketing"
-                        ]
                     }
                 },
                 "required" : [
@@ -700,8 +669,7 @@
                     "effectiveRoles",
                     "effectiveAssignments",
                     "lastSync",
-                    "kbaInfo",
-                    "preferences"
+                    "kbaInfo"
                 ]
             }
         },
