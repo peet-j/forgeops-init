@@ -85,24 +85,17 @@
                     "target" : "sn"
                 },
                 {
-                    "source" : "",
                     "transform" : {
                         "type" : "text/javascript",
-                        "source" : "source.displayName || (source.givenName + ' ' + source.sn);"
+                        "globals" : { },
+                        "source" : "source.displayName || (source.givenName + ' ' + source.sn);\n"
                     },
-                    "target" : "cn"
+                    "target" : "cn",
+                    "source" : ""
                 },
                 {
                     "source" : "userName",
                     "target" : "uid"
-                },
-                {
-                    "source" : "description",
-                    "target" : "description",
-                    "condition" : {
-                        "type" : "text/javascript",
-                        "source" : "!!object.description"
-                    }
                 },
                 {
                     "source" : "mail",
@@ -127,12 +120,22 @@
                     "target" : "telephoneNumber",
                     "condition" : {
                         "type" : "text/javascript",
+                        "globals" : { },
                         "source" : "!!object.telephoneNumber"
                     }
                 },
                 {
                     "source" : "ldapGroups",
                     "target" : "ldapGroups"
+                },
+                {
+                    "target" : "dn",
+                    "source" : "mail",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "\"uid=\" + source + \",ou=people,dc=example,dc=com\""
+                    }
                 }
             ],
             "onCreate" : {
@@ -141,36 +144,56 @@
             },
             "policies" : [
                 {
-                    "situation" : "CONFIRMED",
-                    "action" : "UPDATE"
+                    "action" : "EXCEPTION",
+                    "situation" : "AMBIGUOUS"
                 },
                 {
-                    "situation" : "FOUND",
-                    "action" : "LINK"
+                    "action" : "EXCEPTION",
+                    "situation" : "SOURCE_MISSING"
                 },
                 {
-                    "situation" : "ABSENT",
-                    "action" : "CREATE"
+                    "action" : "EXCEPTION",
+                    "situation" : "MISSING"
                 },
                 {
-                    "situation" : "AMBIGUOUS",
-                    "action" : "IGNORE"
+                    "action" : "EXCEPTION",
+                    "situation" : "FOUND_ALREADY_LINKED"
                 },
                 {
-                    "situation" : "MISSING",
-                    "action" : "IGNORE"
+                    "action" : "DELETE",
+                    "situation" : "UNQUALIFIED"
                 },
                 {
-                    "situation" : "SOURCE_MISSING",
-                    "action" : "DELETE"
+                    "action" : "EXCEPTION",
+                    "situation" : "UNASSIGNED"
                 },
                 {
-                    "situation" : "UNQUALIFIED",
-                    "action" : "IGNORE"
+                    "action" : "EXCEPTION",
+                    "situation" : "LINK_ONLY"
                 },
                 {
-                    "situation" : "UNASSIGNED",
-                    "action" : "IGNORE"
+                    "action" : "IGNORE",
+                    "situation" : "TARGET_IGNORED"
+                },
+                {
+                    "action" : "IGNORE",
+                    "situation" : "SOURCE_IGNORED"
+                },
+                {
+                    "action" : "IGNORE",
+                    "situation" : "ALL_GONE"
+                },
+                {
+                    "action" : "UPDATE",
+                    "situation" : "CONFIRMED"
+                },
+                {
+                    "action" : "UPDATE",
+                    "situation" : "FOUND"
+                },
+                {
+                    "action" : "CREATE",
+                    "situation" : "ABSENT"
                 }
             ],
             "enableSync" : true

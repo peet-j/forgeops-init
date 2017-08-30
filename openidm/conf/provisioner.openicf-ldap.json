@@ -57,13 +57,17 @@
         "groupMemberAttribute" : "uniqueMember",
         "usePagedResultControl" : true,
         "blockSize" : 100,
-        "uidAttribute" : "uid",
+        "uidAttribute" : "dn",
         "maintainLdapGroupMembership" : false,
         "respectResourcePasswordPolicyChangeAfterReset" : false,
         "baseContexts" : [
             "dc=example,dc=com"
         ],
         "passwordAttributeToSynchronize" : "password",
+        "groupObjectClasses" : [
+            "top",
+            "groupofuniquenames"
+        ],
         "baseContextsToSynchronize" : [
             "dc=example,dc=com"
         ]
