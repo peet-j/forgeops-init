@@ -331,8 +331,8 @@
                     }
                 ]
             },
-            "audit_authentication" : null,
-            "audit_activity" : null,
+            "audit_authentication" : { },
+            "audit_activity" : { },
             "audit_access" : {
                 "index" : [
                     {
@@ -347,8 +347,8 @@
                     }
                 ]
             },
-            "audit_sync" : null,
-            "audit_config" : null,
+            "audit_sync" : { },
+            "audit_config" : { },
             "updates" : {
                 "index" : [
                     {
@@ -358,8 +358,8 @@
                     }
                 ]
             },
-            "update_file" : null,
-            "_studio_bookmark" : null
+            "update_file" : { },
+            "_studio_bookmark" : { }
         }
     },
     "embeddedServer" : {

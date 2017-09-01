@@ -1,7 +1,7 @@
 {
     "configuration" : {
         "selfRegistration" : true,
-        "passwordReset" : true,
+        "passwordReset" : false,
         "forgotUsername" : false,
         "lang" : "en",
         "passwordResetLink" : "",
@@ -25,7 +25,6 @@
         },
         "defaultNotificationType" : "info",
         "kbaDefinitionEnabled" : false,
-        "kbaEnabled" : false,
-        "kbaVerificationEnabled" : false
+        "kbaEnabled" : false
     }
 }

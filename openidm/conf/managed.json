@@ -27,44 +27,55 @@
                 "file" : "roles/postOperation-roles.js"
             },
             "actions" : {
-                "resetPassword" : {
-                    "type" : "text/javascript",
-                    "source" : "require('ui/resetPassword').sendMail(object, subject, message, passwordRules, passwordLength);",
-                    "globals" : {
-                        "subject" : "Your password has been reset by an administrator",
-                        "message" : "<html><body><p>{{object.userName}}'s new password is: {{password}}</p></body></html>",
-                        "passwordRules" : [
-                            {
-                                "rule" : "UPPERCASE",
-                                "minimum" : 1
-                            },
-                            {
-                                "rule" : "LOWERCASE",
-                                "minimum" : 1
-                            },
-                            {
-                                "rule" : "INTEGERS",
-                                "minimum" : 1
-                            },
-                            {
-                                "rule" : "SPECIAL",
-                                "minimum" : 1
-                            }
+                "resetPassword": {
+                    "type": "text/javascript",
+                    "source": "require('ui/resetPassword').sendMail(object, subject, message, passwordRules, passwordLength);",
+                    "globals": {
+                        "subject": "Your password has been reset by an administrator",
+                        "message": "<html><body><p>{{object.userName}}'s new password is: {{password}}</p></body></html>",
+                        "passwordRules": [
+                          { "rule": "UPPERCASE", "minimum": 1 },
+                          { "rule": "LOWERCASE", "minimum": 1 },
+                          { "rule": "INTEGERS", "minimum": 1 },
+                          { "rule": "SPECIAL", "minimum": 1 }
                         ],
-                        "passwordLength" : 16
+                      "passwordLength": 16
                     }
                 }
             },
             "schema" : {
-                "$schema" : "http://forgerock.org/json-schema#",
-                "type" : "object",
+                "id" : "http://jsonschema.net",
                 "title" : "User",
-                "description" : "",
-                "icon" : "",
+                "viewable" : true,
+                "$schema" : "http://json-schema.org/draft-03/schema",
+                "order" : [
+                    "_id",
+                    "userName",
+                    "password",
+                    "givenName",
+                    "sn",
+                    "mail",
+                    "accountStatus",
+                    "telephoneNumber",
+                    "postalAddress",
+                    "address2",
+                    "city",
+                    "postalCode",
+                    "country",
+                    "stateProvince",
+                    "roles",
+                    "manager",
+                    "authzRoles",
+                    "reports",
+                    "effectiveRoles",
+                    "effectiveAssignments",
+                    "lastSync",
+                    "kbaInfo",
+                    "preferences"
+                ],
                 "properties" : {
                     "_id" : {
-                        "description" : "",
-                        "title" : "",
+                        "type" : "string",
                         "viewable" : false,
                         "searchable" : false,
                         "userEditable" : false,
@@ -77,47 +88,20 @@
                                     ]
                                 }
                             }
-                        ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
-                    },
-                    "userName" : {
-                        "description" : "",
-                        "title" : "Username",
-                        "viewable" : true,
-                        "searchable" : true,
-                        "userEditable" : true,
-                        "policies" : [
-                            {
-                                "policyId" : "unique",
-                                "params" : { }
-                            },
-                            {
-                                "policyId" : "no-internal-user-conflict",
-                                "params" : { }
-                            },
-                            {
-                                "policyId" : "cannot-contain-characters",
-                                "params" : {
-                                    "forbiddenChars" : [
-                                        "/"
-                                    ]
-                                }
-                            }
-                        ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        ]
                     },
                     "password" : {
-                        "description" : "",
                         "title" : "Password",
+                        "type" : "string",
                         "viewable" : false,
                         "searchable" : false,
+                        "minLength" : 8,
                         "userEditable" : true,
+                        "encryption" : {
+                            "key" : "openidm-sym-default"
+                        },
+                        "scope" : "private",
+                        "isProtected": true,
                         "policies" : [
                             {
                                 "policyId" : "at-least-X-capitals",
@@ -141,169 +125,124 @@
                                     ]
                                 }
                             }
-                        ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string",
-                        "encryption" : {
-                            "key" : "openidm-sym-default"
+                        ]
+                    },
+                    "kbaInfo" : {
+                        "type" : "array",
+                        "userEditable" : true,
+                        "viewable" : false,
+                        "items" : {
+                            "type" : "object",
+                            "properties" : {
+                                "answer" : {
+                                    "type" : "string"
+                                },
+                                "customQuestion" : {
+                                    "type" : "string"
+                                },
+                                "questionId" : {
+                                    "type" : "string"
+                                }
+                            },
+                            "order": [
+                                "answer",
+                                "customQuestion",
+                                "questionId"
+                            ],
+                            "required": []
+                        }
+                    },
+                    "preferences" : {
+                        "title" : "Preferences",
+                        "viewable" : true,
+                        "searchable" : false,
+                        "userEditable" : true,
+                        "type" : "object",
+                        "properties" : {
+                            "updates" : {
+                                "description" : "Send me news and updates",
+                                "type" : "boolean"
+                            },
+                            "marketing": {
+                                "description" : "Send me special offers and services",
+                                "type" : "boolean"
+                            }
                         },
-                        "scope" : "private"
-                    },
-                    "givenName" : {
-                        "description" : "",
-                        "title" : "First Name",
-                        "viewable" : true,
-                        "searchable" : true,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
-                    },
-                    "sn" : {
-                        "description" : "",
-                        "title" : "Last Name",
-                        "viewable" : true,
-                        "searchable" : true,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "order": [
+                            "updates",
+                            "marketing"
+                        ],
+                        "required": []
                     },
                     "mail" : {
-                        "description" : "",
                         "title" : "Email Address",
                         "viewable" : true,
+                        "type" : "string",
                         "searchable" : true,
                         "userEditable" : true,
                         "policies" : [
                             {
-                                "policyId" : "valid-email-address-format",
-                                "params" : { }
+                                "policyId" : "valid-email-address-format"
                             }
-                        ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        ]
                     },
-                    "accountStatus" : {
-                        "description" : "",
-                        "title" : "Status",
+                    "sn" : {
+                        "title" : "Last Name",
                         "viewable" : true,
+                        "type" : "string",
                         "searchable" : true,
-                        "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
-                    },
-                    "telephoneNumber" : {
-                        "description" : "",
-                        "title" : "Mobile Phone",
-                        "viewable" : false,
-                        "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
-                    },
-                    "postalAddress" : {
-                        "description" : "",
-                        "title" : "Address 1",
-                        "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "userEditable" : true
                     },
                     "address2" : {
-                        "description" : "",
+                        "type" : "string",
                         "title" : "Address 2",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "userEditable" : true
+                    },
+                    "givenName" : {
+                        "title" : "First Name",
+                        "viewable" : true,
+                        "type" : "string",
+                        "searchable" : true,
+                        "userEditable" : true
                     },
                     "city" : {
-                        "description" : "",
+                        "type" : "string",
                         "title" : "City",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
-                    },
-                    "postalCode" : {
-                        "description" : "",
-                        "title" : "Postal Code",
-                        "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "userEditable" : true
                     },
                     "country" : {
-                        "description" : "",
+                        "type" : "string",
                         "title" : "Country",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "userEditable" : true
                     },
-                    "stateProvince" : {
-                        "description" : "",
-                        "title" : "State/Province",
+                    "postalCode" : {
+                        "type" : "string",
+                        "title" : "Postal Code",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "string"
+                        "userEditable" : true
+                    },
+                    "accountStatus" : {
+                        "title" : "Status",
+                        "viewable" : true,
+                        "type" : "string",
+                        "searchable" : true,
+                        "userEditable" : false
                     },
                     "roles" : {
                         "description" : "",
                         "title" : "Provisioning Roles",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
+                        "userEditable" : false,
                         "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
                         "type" : "array",
                         "items" : {
                             "type" : "relationship",
                             "reverseRelationship" : true,
                             "reversePropertyName" : "members",
-                            "validate" : false,
+                            "validate" : true,
                             "properties" : {
                                 "_ref" : {
                                     "type" : "string"
@@ -311,7 +250,10 @@
                                 "_refProperties" : {
                                     "type" : "object",
                                     "properties" : {
-                                        "undefined" : {
+                                        "_id" : {
+                                            "type" : "string"
+                                        },
+                                        "_grantType" : {
                                             "type" : "string",
                                             "label" : "Grant Type"
                                         }
@@ -335,63 +277,13 @@
                             ]
                         }
                     },
-                    "manager" : {
-                        "description" : "",
-                        "title" : "Manager",
-                        "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "relationship",
-                        "reverseRelationship" : true,
-                        "reversePropertyName" : "reports",
-                        "validate" : true,
-                        "properties" : {
-                            "_ref" : {
-                                "type" : "string"
-                            },
-                            "_refProperties" : {
-                                "type" : "object",
-                                "properties" : {
-                                    "undefined" : {
-                                        "type" : "string",
-                                        "label" : ""
-                                    }
-                                }
-                            }
-                        },
-                        "resourceCollection" : [
-                            {
-                                "path" : "managed/user",
-                                "label" : "User",
-                                "query" : {
-                                    "queryFilter" : "true",
-                                    "fields" : [
-                                        "userName",
-                                        "givenName",
-                                        "sn"
-                                    ],
-                                    "sortKeys" : [
-                                        "userName"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
                     "authzRoles" : {
                         "description" : "",
                         "title" : "Authorization Roles",
                         "viewable" : true,
-                        "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
                         "type" : "array",
+                        "userEditable" : false,
+                        "returnByDefault" : false,
                         "items" : {
                             "type" : "relationship",
                             "reverseRelationship" : true,
@@ -404,9 +296,8 @@
                                 "_refProperties" : {
                                     "type" : "object",
                                     "properties" : {
-                                        "undefined" : {
-                                            "type" : "string",
-                                            "label" : ""
+                                        "_id" : {
+                                            "type" : "string"
                                         }
                                     }
                                 }
@@ -446,13 +337,9 @@
                         "description" : "",
                         "title" : "Direct Reports",
                         "viewable" : true,
-                        "searchable" : false,
                         "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
                         "type" : "array",
+                        "returnByDefault" : false,
                         "items" : {
                             "type" : "relationship",
                             "reverseRelationship" : true,
@@ -465,9 +352,8 @@
                                 "_refProperties" : {
                                     "type" : "object",
                                     "properties" : {
-                                        "undefined" : {
-                                            "type" : "string",
-                                            "label" : ""
+                                        "_id" : {
+                                            "type" : "string"
                                         }
                                     }
                                 }
@@ -492,184 +378,147 @@
                         }
                     },
                     "effectiveRoles" : {
-                        "description" : "",
+                        "type" : "array",
                         "title" : "Effective Roles",
                         "viewable" : false,
-                        "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
                         "returnByDefault" : true,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "array",
+                        "isVirtual" : true,
+                        "onRetrieve" : {
+                            "type" : "text/javascript",
+                             "source" : "require('roles/effectiveRoles').calculateEffectiveRoles(object, 'roles');"
+                        },
                         "items" : {
-                            "type" : "object",
-                            "properties" : { },
-                            "required" : [ ],
-                            "order" : [ ]
+                            "type" : "object"
                         }
                     },
                     "effectiveAssignments" : {
-                        "description" : "",
+                        "type" : "array",
                         "title" : "Effective Assignments",
                         "viewable" : false,
-                        "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
                         "returnByDefault" : true,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "array",
+                        "isVirtual" : true,
+                        "onRetrieve" : {
+                            "type" : "text/javascript",
+                            "file" : "roles/effectiveAssignments.js",
+                            "effectiveRolesPropName" : "effectiveRoles"
+                        },
                         "items" : {
-                            "type" : "object",
-                            "properties" : { },
-                            "required" : [ ],
-                            "order" : [ ]
+                            "type" : "object"
                         }
                     },
-                    "lastSync" : {
+                    "telephoneNumber" : {
+                        "type" : "string",
+                        "title" : "Mobile Phone",
+                        "viewable" : true,
+                        "userEditable" : true,
+                        "pattern" : "^\\+?([0-9\\- \\(\\)])*$"
+                    },
+                    "stateProvince" : {
+                        "type" : "string",
+                        "title" : "State/Province",
+                        "viewable" : true,
+                        "userEditable" : true
+                    },
+                    "postalAddress" : {
+                        "type" : "string",
+                        "title" : "Address 1",
+                        "viewable" : true,
+                        "userEditable" : true
+                    },
+                    "userName" : {
+                        "title" : "Username",
+                        "viewable" : true,
+                        "type" : "string",
+                        "searchable" : true,
+                        "userEditable" : true,
+                        "minLength" : 1,
+                        "policies" : [
+                            {
+                                "policyId" : "unique"
+                            },
+                            {
+                                "policyId" : "no-internal-user-conflict"
+                            },
+                            {
+                                "policyId" : "cannot-contain-characters",
+                                "params" : {
+                                    "forbiddenChars" : [
+                                        "/"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "manager" : {
+                        "type" : "relationship",
+                        "validate" : true,
+                        "reverseRelationship" : true,
+                        "reversePropertyName" : "reports",
                         "description" : "",
-                        "title" : "",
+                        "title" : "Manager",
+                        "viewable" : true,
+                        "searchable" : false,
+                        "properties" : {
+                            "_ref" : {
+                                "type" : "string"
+                            },
+                            "_refProperties" : {
+                                "type" : "object",
+                                "properties" : {
+                                    "_id" : {
+                                        "type" : "string"
+                                    }
+                                }
+                            }
+                        },
+                        "resourceCollection" : [
+                            {
+                                "path" : "managed/user",
+                                "label" : "User",
+                                "query" : {
+                                    "queryFilter" : "true",
+                                    "fields" : [
+                                        "userName",
+                                        "givenName",
+                                        "sn"
+                                    ],
+                                    "sortKeys" : [
+                                        "userName"
+                                    ]
+                                }
+                            }
+                        ],
+                        "userEditable" : false
+                    },
+                    "lastSync" : {
+                        "type" : "object",
+                        "scope" : "private",
                         "viewable" : false,
                         "searchable" : false,
-                        "userEditable" : false,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "object",
                         "properties" : {
                             "effectiveAssignments" : {
-                                "description" : "",
-                                "title" : "",
-                                "viewable" : true,
-                                "searchable" : false,
-                                "userEditable" : false,
-                                "policies" : [ ],
-                                "returnByDefault" : false,
-                                "minLength" : null,
-                                "pattern" : "",
-                                "nullable" : false,
                                 "type" : "array",
                                 "items" : {
-                                    "type" : "object",
-                                    "properties" : { },
-                                    "required" : [ ],
-                                    "order" : [ ]
+                                    "type" : "object"
                                 }
                             },
                             "timestamp" : {
-                                "description" : "",
-                                "title" : "",
-                                "viewable" : true,
-                                "searchable" : false,
-                                "userEditable" : false,
-                                "policies" : [ ],
-                                "returnByDefault" : false,
-                                "minLength" : null,
-                                "pattern" : "",
-                                "nullable" : false,
                                 "type" : "string"
                             }
                         },
-                        "required" : [ ],
                         "order" : [
                             "effectiveAssignments",
                             "timestamp"
-                        ]
-                    },
-                    "kbaInfo" : {
-                        "description" : "",
-                        "title" : "",
-                        "viewable" : false,
-                        "searchable" : false,
-                        "userEditable" : true,
-                        "policies" : [ ],
-                        "returnByDefault" : false,
-                        "minLength" : null,
-                        "pattern" : "",
-                        "type" : "array",
-                        "items" : {
-                            "type" : "object",
-                            "properties" : {
-                                "answer" : {
-                                    "description" : "",
-                                    "title" : "",
-                                    "viewable" : true,
-                                    "searchable" : false,
-                                    "userEditable" : false,
-                                    "policies" : [ ],
-                                    "returnByDefault" : false,
-                                    "minLength" : null,
-                                    "pattern" : "",
-                                    "nullable" : false,
-                                    "type" : "string"
-                                },
-                                "customQuestion" : {
-                                    "description" : "",
-                                    "title" : "",
-                                    "viewable" : true,
-                                    "searchable" : false,
-                                    "userEditable" : false,
-                                    "policies" : [ ],
-                                    "returnByDefault" : false,
-                                    "minLength" : null,
-                                    "pattern" : "",
-                                    "nullable" : false,
-                                    "type" : "string"
-                                },
-                                "questionId" : {
-                                    "description" : "",
-                                    "title" : "",
-                                    "viewable" : true,
-                                    "searchable" : false,
-                                    "userEditable" : false,
-                                    "policies" : [ ],
-                                    "returnByDefault" : false,
-                                    "minLength" : null,
-                                    "pattern" : "",
-                                    "nullable" : false,
-                                    "type" : "string"
-                                }
-                            },
-                            "required" : [ ],
-                            "order" : [
-                                "answer",
-                                "customQuestion",
-                                "questionId"
-                            ]
-                        }
+                        ],
+                        "required": []
                     }
                 },
+                "type" : "object",
                 "required" : [
                     "userName",
                     "givenName",
                     "sn",
                     "mail"
-                ],
-                "order" : [
-                    "_id",
-                    "userName",
-                    "password",
-                    "givenName",
-                    "sn",
-                    "mail",
-                    "accountStatus",
-                    "telephoneNumber",
-                    "postalAddress",
-                    "address2",
-                    "city",
-                    "postalCode",
-                    "country",
-                    "stateProvince",
-                    "roles",
-                    "manager",
-                    "authzRoles",
-                    "reports",
-                    "effectiveRoles",
-                    "effectiveAssignments",
-                    "lastSync",
-                    "kbaInfo"
                 ]
             }
         },
@@ -977,7 +826,7 @@
                                 "name",
                                 "value"
                             ],
-                            "required" : [ ]
+                            "required": []
                         }
                     },
                     "linkQualifiers" : {

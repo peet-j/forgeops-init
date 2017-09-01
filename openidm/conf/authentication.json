@@ -28,23 +28,22 @@
                 "enabled" : true
             },
             {
-                "enabled" : true,
+                "name" : "MANAGED_USER",
                 "properties" : {
-                    "queryOnResource" : "managed/user",
-                    "queryId" : "credential-query",
-                    "defaultUserRoles" : [ ],
-                    "augmentSecurityContext" : {
+                    "augmentSecurityContext": {
                         "type" : "text/javascript",
-                        "globals" : { },
                         "source" : "require('auth/customAuthz').setProtectedAttributes(security)"
                     },
+                    "queryId" : "credential-query",
+                    "queryOnResource" : "managed/user",
                     "propertyMapping" : {
                         "authenticationId" : "username",
                         "userCredential" : "password",
                         "userRoles" : "authzRoles"
-                    }
+                    },
+                    "defaultUserRoles" : [ ]
                 },
-                "name" : "MANAGED_USER"
+                "enabled" : true
             },
             {
                 "name" : "INTERNAL_USER",
@@ -70,26 +69,6 @@
                     "allowedAuthenticationIdPatterns" : [ ]
                 },
                 "enabled" : true
-            },
-            {
-                "enabled" : true,
-                "properties" : {
-                    "queryOnResource" : "system/ldap/account",
-                    "defaultUserRoles" : [
-                        "openidm-authorized"
-                    ],
-                    "managedUserLink" : "systemLdapAccounts_managedUser",
-                    "augmentSecurityContext" : {
-                        "type" : "text/javascript",
-                        "globals" : { },
-                        "file" : "auth/populateAsManagedUser.js"
-                    },
-                    "propertyMapping" : {
-                        "authenticationId" : "uid",
-                        "userRoles" : "authzRoles"
-                    }
-                },
-                "name" : "PASSTHROUGH"
             }
         ]
     }
