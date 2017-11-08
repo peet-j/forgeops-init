@@ -1,9 +1,0 @@
-[
-    {
-        "operation" : "add",
-        "field" : "/responseHeaders",
-        "value" : {
-            "X-Frame-Options" : "DENY"
-        }
-    }
-]
