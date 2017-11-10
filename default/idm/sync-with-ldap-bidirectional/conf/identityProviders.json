@@ -25,56 +25,49 @@
             ],
             "authenticationIdKey" : "sub",
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Google",
+                "id" : "http://jsonschema.net",
                 "title" : "Google",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "sub" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "given_name" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "family_name" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "picture" : {
-                        "description" : "Profile Picture URL",
                         "title" : "Profile Picture URL",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "locale" : {
-                        "description" : "Locale Code",
                         "title" : "Locale Code",
                         "viewable" : true,
                         "type" : "string",
@@ -154,49 +147,43 @@
             "basicAuth" : false,
             "authenticationIdKey" : "id",
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Facebook",
+                "id" : "http://jsonschema.net",
                 "title" : "Facebook",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "first_name" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "last_name" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "locale" : {
-                        "description" : "Locale Code",
                         "title" : "Locale Code",
                         "viewable" : true,
                         "type" : "string",
@@ -270,68 +257,59 @@
                 "buttonCustomStyleHover" : "background-color:#006ea9; border-color:#006ea9;color:white;"
             },
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:LinkedIn",
+                "id" : "http://jsonschema.net",
                 "title" : "LinkedIn",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : false
                     },
                     "formattedName" : {
-                        "description" : "Formatted Name",
                         "title" : "Formatted Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "firstName" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "lastName" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "emailAddress" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "location" : {
-                        "description" : "Location",
                         "title" : "Location",
                         "viewable" : true,
                         "type" : "object",
                         "searchable" : true,
                         "properties" : {
                             "country" : {
-                                "description" : "Country",
                                 "title" : "Country",
                                 "type" : "object",
                                 "properties" : {
                                     "code" : {
-                                        "description" : "Locale Code",
                                         "title" : "Locale Code",
                                         "type" : "string"
                                     }
                                 }
                             },
                             "name" : {
-                                "description" : "Area Name",
                                 "type" : "string",
                                 "title" : "Area Name"
                             }
@@ -409,28 +387,25 @@
                 "buttonCustomStyleHover" : "background: linear-gradient(to bottom, #f6c94e 15%,#f6c94e 85%);color: black;border-color: #b48c24;"
             },
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Amazon",
+                "id" : "http://jsonschema.net",
                 "title" : "Amazon",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "user_id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
@@ -489,7 +464,6 @@
                 "buttonCustomStyleHover" : "background-color: #0095cc; border-color: #0095cc; color:white;"
             },
             "schema": {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Wordpress",
                 "username": "http://jsonschema.net",
                 "title": "Wordpress",
                 "viewable": true,
@@ -497,14 +471,12 @@
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "properties": {
                     "username": {
-                        "description": "username",
                         "title": "username",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "email": {
-                        "description" : "email",
                         "title": "email",
                         "viewable": true,
                         "type": "string",
@@ -557,42 +529,37 @@
                 "buttonCustomStyleHover" : "background-color: #fff; border-color: #8b8b8b; color: #8b8b8b;"
             },
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Microsoft",
+                "id" : "http://jsonschema.net",
                 "title": "Microsoft",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : false
                     },
                     "displayName" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "givenName" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "surname" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "userPrincipalName": {
-                        "description" : "Email Address",
                         "title": "Email Address",
                         "viewable": true,
                         "type": "string",
@@ -646,7 +613,7 @@
             "authorizationEndpoint" : "https://oauth.vk.com/authorize",
             "tokenEndpoint" : "https://oauth.vk.com/access_token",
             "userInfoEndpoint" : "https://api.vk.com/method/users.get",
-            "redirectUri" : "https://localhost:8443/oauthReturn/",
+            "redirectUri" : "",
             "scope" : [
                 "email"
             ],
@@ -688,41 +655,36 @@
                 }
             ],
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Vkontakte",
+                "id" : "http://jsonschema.net",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "uid" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "first_name" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "last_name" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
@@ -748,7 +710,7 @@
             "authorizationEndpoint" : "https://api.instagram.com/oauth/authorize/",
             "tokenEndpoint" : "https://api.instagram.com/oauth/access_token",
             "userInfoEndpoint" : "https://api.instagram.com/v1/users/self/",
-            "redirectUri" : "https://localhost:8443/oauthReturn/",
+            "redirectUri" : "",
             "scope" : [
                 "basic",
                 "public_content"
@@ -785,34 +747,30 @@
                 }
             ],
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Instagram",
+                "id" : "http://jsonschema.net",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "full_name" : {
-                        "description" : "Full Name",
                         "title" : "Full Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "profile_picture" : {
-                        "description" : "Profile Picture URL",
                         "title" : "Profile Picture URL",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "username" : {
-                        "description" : "Username",
                         "title" : "Username",
                         "viewable" : true,
                         "type" : "string",
@@ -840,7 +798,7 @@
             "tokenEndpoint" : "https://api.wechat.com/sns/oauth2/access_token",
             "refreshTokenEndpoint" : "https://api.wechat.com/sns/oauth2/refresh_token",
             "userInfoEndpoint" : "https://api.wechat.com/sns/userinfo",
-            "redirectUri" : "https://localhost:8443/oauthReturn/",
+            "redirectUri" : "",
             "scope" : [
                 "snsapi_login"
             ],
@@ -876,27 +834,24 @@
                 }
             ],
             "schema" : {
-                "id": "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Wechat",
+                "id": "http://jsonschema.net",
                 "viewable": true,
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "properties": {
                     "openid": {
-                        "description" : "ID",
                         "title": "ID",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "nickname": {
-                        "description" : "Username",
                         "title": "Username",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "headimgurl": {
-                        "description" : "Profile Picture URL",
                         "title": "Profile Picture URL",
                         "viewable": true,
                         "type": "string",
@@ -958,48 +913,42 @@
                 }
             ],
             "schema": {
-                "id": "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Yahoo",
+                "id": "http://jsonschema.net",
                 "viewable": true,
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "properties": {
                     "sub": {
-                        "description" : "ID",
                         "title": "ID",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "name": {
-                        "description" : "Name",
                         "title": "Name",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "given_name": {
-                        "description" : "First Name",
                         "title": "First Name",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "family_name": {
-                        "description" : "Last Name",
                         "title": "Last Name",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "email": {
-                        "description" : "Email Address",
                         "title": "Email Address",
                         "viewable": true,
                         "type": "string",
                         "searchable": true
                     },
                     "locale": {
-                        "description" : "Locale Code",
                         "title": "Locale Code",
                         "viewable": true,
                         "type": "string",
@@ -1053,49 +1002,43 @@
             "configClass" : "org.forgerock.oauth.clients.oauth2.OAuth2ClientConfiguration",
             "basicAuth": false,
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Salesforce",
+                "id" : "http://jsonschema.net",
                 "title" : "Salesforce",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "user_id" : {
-                        "description" : "ID",
                         "title" : "ID",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Name",
                         "title" : "Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "given_name" : {
-                        "description" : "First Name",
                         "title" : "First Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "family_name" : {
-                        "description" : "Last Name",
                         "title" : "Last Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "zoneInfo" : {
-                        "description" : "Locale Code",
                         "title" : "Locale Code",
                         "viewable" : true,
                         "type" : "string",
@@ -1165,35 +1108,31 @@
             "redirectUri" : "https://localhost:8443/oauthReturn/",
             "configClass" : "org.forgerock.oauth.clients.twitter.TwitterClientConfiguration",
             "schema" : {
-                "id" : "urn:jsonschema:org:forgerock:openidm:identityProviders:api:Twitter",
+                "id" : "http://jsonschema.net",
                 "title" : "Twitter",
                 "viewable" : true,
                 "type" : "object",
                 "$schema" : "http://json-schema.org/draft-03/schema",
                 "properties" : {
                     "id_str" : {
-                        "description" : "ID",
                         "title" : "Id",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "name" : {
-                        "description" : "Full Name",
                         "title" : "Full Name",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "screen_name" : {
-                        "description" : "User Id",
                         "title" : "User Id",
                         "viewable" : true,
                         "type" : "string",
                         "searchable" : true
                     },
                     "email" : {
-                        "description" : "Email Address",
                         "title" : "Email Address",
                         "viewable" : true,
                         "type" : "string",
