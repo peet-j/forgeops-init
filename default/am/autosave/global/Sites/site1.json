@@ -1,0 +1,15 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "5.5.0",
+    "entityType" : "Sites",
+    "entityId" : "site1",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "site1",
+    "id" : "02",
+    "url" : "http://openam.default.example.com/openam",
+    "secondaryURLs" : [ ]
+  }
+}
