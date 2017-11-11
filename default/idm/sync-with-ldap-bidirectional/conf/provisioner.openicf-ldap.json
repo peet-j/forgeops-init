@@ -18,7 +18,7 @@
         "accountSynchronizationFilter" : null,
         "groupSearchFilter" : null,
         "groupSynchronizationFilter" : null,
-        "passwordAttributeToSynchronize" : null,
+        "passwordAttributeToSynchronize" : "password",
         "synchronizePasswords" : false,
         "removeLogEntryObjectClassFromFilter" : true,
         "modifiersNamesToFilterOut" : [ ],
@@ -36,7 +36,7 @@
         "useBlocks" : false,
         "maintainPosixGroupMembership" : false,
         "failover" : [ ],
-        "readSchema" : false,
+        "readSchema" : true,
         "accountObjectClasses" : [
             "top",
             "person",
@@ -53,6 +53,10 @@
         "uidAttribute" : "dn",
         "maintainLdapGroupMembership" : false,
         "respectResourcePasswordPolicyChangeAfterReset" : false,
+        "groupObjectClasses" : [
+            "top",
+            "groupofuniquenames"
+        ],
         "baseContextsToSynchronize" : [
             "dc=openam,dc=forgerock,dc=org"
         ]
