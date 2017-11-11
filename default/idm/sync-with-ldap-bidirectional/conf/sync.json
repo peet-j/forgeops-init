@@ -72,7 +72,8 @@
                     "situation" : "UNASSIGNED",
                     "action" : "IGNORE"
                 }
-            ]
+            ],
+            "enableSync" : false
         },
         {
             "name" : "managedUser_systemLdapAccounts",
@@ -135,6 +136,15 @@
                         "type" : "text/javascript",
                         "source" : "!!object.telephoneNumber"
                     }
+                },
+                {
+                    "target" : "dn",
+                    "source" : "userName",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "\"uid=\" + source + \"ou=people,dc=openam,dc=forgerock,dc=org\""
+                    }
                 }
             ],
             "policies" : [
@@ -169,6 +179,86 @@
                 {
                     "situation" : "UNASSIGNED",
                     "action" : "IGNORE"
+                }
+            ]
+        },
+        {
+            "target" : "system/ldap/group",
+            "source" : "managed/role",
+            "name" : "managedRole_systemLdapGroup",
+            "icon" : null,
+            "properties" : [
+                {
+                    "target" : "dn",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "\"cn=\" + source.name + \",ou=groups,dc=openam,dc=forgerock,dc=org\""
+                    },
+                    "source" : ""
+                },
+                {
+                    "target" : "cn",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "source.name"
+                    },
+                    "source" : ""
+                }
+            ],
+            "policies" : [
+                {
+                    "action" : "ASYNC",
+                    "situation" : "ABSENT"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "ALL_GONE"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "AMBIGUOUS"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "CONFIRMED"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "FOUND"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "FOUND_ALREADY_LINKED"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "LINK_ONLY"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "MISSING"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "SOURCE_IGNORED"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "SOURCE_MISSING"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "TARGET_IGNORED"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "UNASSIGNED"
+                },
+                {
+                    "action" : "ASYNC",
+                    "situation" : "UNQUALIFIED"
                 }
             ]
         }
