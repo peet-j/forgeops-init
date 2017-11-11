@@ -4,7 +4,7 @@ Holds the configuration for ForgeRock Platfrom components.
 
 # Usage
 
-Create a branches for every project and namespace, eg: myproject/default, myproject/qa, myproject/JIRA-XYZ, etc.
+Create branches for every project and namespace, eg: myproject/default, myproject/qa, myproject/JIRA-XYZ, etc.
 Restrict access to myproject/default branch. 
 
 
