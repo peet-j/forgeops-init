@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "realm" : "/hmcts",
+    "amsterVersion" : "5.5.0",
+    "entityType" : "HotpModule",
+    "entityId" : "HOTP",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "HOTP",
+    "autoSendOTP" : false,
+    "smtpHostPort" : 465,
+    "smtpSslEnabled" : "SSL",
+    "userProfileEmailAttribute" : "mail",
+    "smtpUsername" : "opensso.sun",
+    "otpMaxRetry" : 3,
+    "otpDeliveryMethod" : "SMS and E-mail",
+    "otpLength" : "8",
+    "smsGatewayClass" : "com.sun.identity.authentication.modules.hotp.DefaultSMSGatewayImpl",
+    "smtpHostname" : "smtp.gmail.com",
+    "authenticationLevel" : 0,
+    "mobileCarrierAttribute" : null,
+    "otpValidityDuration" : 5,
+    "userProfileTelephoneAttribute" : "telephoneNumber",
+    "smtpFromAddress" : "no-reply@openam.org",
+    "smtpUserPassword" : null,
+    "smtpUserPassword-encrypted" : "AAAAA0FFUwIQORB5QyqfsNH1//eLmqeInBcSUMQSx2RBkJia5MeUTAznqms2QzxXHw==",
+    "_type" : {
+      "_id" : "hotp",
+      "name" : "HOTP",
+      "collection" : true
+    }
+  }
+}
