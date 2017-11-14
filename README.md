@@ -1,6 +1,6 @@
 # forgeops-init
 
-Holds the configuration for ForgeRock Platfrom components. Test change.
+Holds the configuration for ForgeRock Platfrom components.
 
 # Usage
 
