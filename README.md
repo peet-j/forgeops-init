@@ -1,7 +1,7 @@
 # forgeops-init
 
-If you are using this repository with the 5.0.0 release as documented in the 
-DevOps guide, check out the `release/5.0.0` branch. Otherwise, check out the 
+If you are using this repository with the 5.5.0 release as documented in the 
+DevOps guide, check out the `release/5.5.0` branch. Otherwise, check out the 
 `master` branch.
 
 
