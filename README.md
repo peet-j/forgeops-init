@@ -1,8 +1,11 @@
 # forgeops-init
 
-If you are using this repository with the 5.5.0 release as documented in the 
-DevOps guide, check out the `release/5.5.0` branch. Otherwise, check out the 
-`master` branch.
+Holds the configuration for ForgeRock Platfrom components.
+
+# Usage
+
+Create branches for every project and namespace, eg: myproject/default, myproject/qa, myproject/JIRA-XYZ, etc.
+Restrict access to myproject/default branch. 
 
 
 ## About This Repository
