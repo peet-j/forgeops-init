@@ -11,11 +11,11 @@
     "defaults" : {
       "clientId" : null,
       "jwksUriAS" : null,
-      "jwkStoreCacheTimeout" : 60,
       "signingKeyAlias" : null,
-      "jwkStoreCacheMissCacheTime" : 1,
+      "jwkStoreCacheTimeout" : 60,
+      "consentResponseTimeLimit" : 2,
       "encryptionKeyAlias" : null,
-      "consentResponseTimeLimit" : 2
+      "jwkStoreCacheMissCacheTime" : 1
     },
     "_type" : {
       "_id" : "RemoteConsentService",
