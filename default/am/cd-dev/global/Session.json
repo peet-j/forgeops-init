@@ -10,7 +10,7 @@
     "_id" : "",
     "stateless" : {
       "statelessSigningHmacSecret" : null,
-      "statelessSigningHmacSecret-encrypted" : "AAAAA0FFUwIQ3Zk0zGnEtMUPIU4zD8zq+z1RXgDs2XDqda73GQvUF6dsUho9h3pt7ZQqPCVqavaW0gsv37xZTUzdrPogpkXQZn4+HQBDnPoH",
+      "statelessSigningHmacSecret-encrypted" : "AAAAA0FFUwIQ8ivJcawY0lmWiMRfcq35f+WdT6XF5IrolHSPDk+SRKPnzANO17PlZ6qlKmNnGMHy+gXwW94joyl6tDpwVC5Qh/xqrCsRtONY",
       "openam-session-stateless-blacklist-poll-interval" : 60,
       "statelessSigningType" : "HS256",
       "openam-session-stateless-enable-session-blacklisting" : false,
@@ -19,7 +19,7 @@
       "openam-session-stateless-blacklist-purge-delay" : 1,
       "statelessSigningRsaCertAlias" : "test",
       "statelessEncryptionAesKey" : null,
-      "statelessEncryptionAesKey-encrypted" : "AAAAA0FFUwIQkSwFK6ax7FgeQ6ElBTjcCN3J3PLGUrVXQkICz3EyU6oBUrEFz99StmSHf2JKsmE5YYfz36fNnwnp/rkk/HrAPPk+CQNOL1PC",
+      "statelessEncryptionAesKey-encrypted" : "AAAAA0FFUwIQRs3sy9VnB0jPahzJFghyDXjPQijiWgU7WuC7ylb26/aKEKrQbn4HaIOPdIlM8VRwUX1j1MJwbctZX3FV0xDh0QsoYdlAMep1",
       "openam-session-stateless-blacklist-cache-size" : 10000,
       "statelessEncryptionRsaCertAlias" : "test"
     },
