@@ -21,7 +21,7 @@
       "supportedScopes" : [ ],
       "codeVerifierEnforced" : false,
       "tokenSigningHmacSharedSecret" : null,
-      "tokenSigningHmacSharedSecret-encrypted" : "AAAAA0FFUwIQHpNULUEul0/0ASmE5RalLcJdC7bMu3Pj8JDLMzA2i8Jb08A0veM1REVdeGjWIAZ//NaOuDbHYMChqed8InVW3cYDFokc0Du8",
+      "tokenSigningHmacSharedSecret-encrypted" : "AAAAA0FFUwIQ/55mvqAtIk19Y1xe5y23NRSQqI4mIFXd6YurBeS3RBO3sjyN89Dsp/Y0YFXqD63SI9qzlv7qeV8svEDGatSlw2rnMqbipxxY",
       "tokenSigningAlgorithm" : "HS256",
       "authenticationAttributes" : [ "uid" ],
       "defaultScopes" : [ ],
