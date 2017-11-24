@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "realm" : "/mickey",
+    "amsterVersion" : "5.5.0",
+    "entityType" : "ResourceTypes",
+    "entityId" : "UrlResourceType",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "UrlResourceType",
+    "uuid" : "UrlResourceType",
+    "name" : "URL",
+    "description" : "",
+    "patterns" : [ "*://*:*/*", "*://*:*/*?*" ],
+    "actions" : {
+      "HEAD" : true,
+      "DELETE" : true,
+      "POST" : true,
+      "GET" : true,
+      "OPTIONS" : true,
+      "PUT" : true,
+      "PATCH" : true
+    },
+    "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
+    "creationDate" : 1511522930736,
+    "lastModifiedBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
+    "lastModifiedDate" : 1511522930736
+  }
+}
