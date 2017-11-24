@@ -21,11 +21,11 @@
     "sslEnabled" : false,
     "usersBaseDn" : "dc=openam,dc=forgerock,dc=org",
     "bindPassword" : null,
-    "bindPassword-encrypted" : "AAAAA0FFUwIQ8+SUGO6/8Ov8T1RCHjnvJ+qWh9ZVR8p4guGfw8h1+sXiBRX2J68QVg==",
+    "bindPassword-encrypted" : "AAAAA0FFUwIQtpfFTihLyeEBrsnUlBT6EvEpJAV7312t5J22GBQDX/bcVfh2Rv4l8g==",
     "connectionPoolMaximumSize" : 10,
     "policyHeartbeatTimeUnit" : "SECONDS",
-    "maximumSearchResults" : 100,
     "realmSearchFilter" : "(objectclass=sunismanagedorganization)",
+    "maximumSearchResults" : 100,
     "_type" : {
       "_id" : "policyconfiguration",
       "name" : "Policy Configuration",

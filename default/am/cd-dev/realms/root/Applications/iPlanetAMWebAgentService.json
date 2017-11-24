@@ -13,17 +13,17 @@
     "attributeNames" : [ ],
     "createdBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
     "resourceTypeUuids" : [ "76656a38-5f8e-401b-83aa-4ccb74ce88d2" ],
+    "entitlementCombiner" : "DenyOverride",
     "applicationType" : "iPlanetAMWebAgentService",
     "subjects" : [ "NOT", "OR", "JwtClaim", "AuthenticatedUsers", "AND", "Identity", "NONE" ],
     "saveIndex" : null,
     "searchIndex" : null,
     "resourceComparator" : null,
     "editable" : true,
-    "entitlementCombiner" : "DenyOverride",
+    "creationDate" : 1511541293404,
+    "lastModifiedBy" : "id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org",
+    "lastModifiedDate" : 1511541293404,
     "conditions" : [ "LEAuthLevel", "Script", "AuthenticateToService", "SimpleTime", "AMIdentityMembership", "OR", "IPv6", "IPv4", "SessionProperty", "AuthScheme", "AuthLevel", "NOT", "Transaction", "AuthenticateToRealm", "AND", "ResourceEnvIP", "LDAPFilter", "OAuth2Scope", "Session" ],
-    "creationDate" : 1510939201043,
-    "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
-    "lastModifiedDate" : 1511346902654,
     "name" : "iPlanetAMWebAgentService"
   }
 }

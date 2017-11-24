@@ -13,9 +13,9 @@
       "jwksUriAS" : null,
       "signingKeyAlias" : null,
       "jwkStoreCacheTimeout" : 60,
+      "encryptionKeyAlias" : null,
       "jwkStoreCacheMissCacheTime" : 1,
-      "consentResponseTimeLimit" : 2,
-      "encryptionKeyAlias" : null
+      "consentResponseTimeLimit" : 2
     },
     "_type" : {
       "_id" : "RemoteConsentService",
