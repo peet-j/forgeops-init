@@ -8,10 +8,10 @@
                 "keystoreType" : "&{openidm.keystore.type}",
                 "keystoreFile" : "&{openidm.keystore.location}",
                 "keystorePassword" : "&{openidm.keystore.password}",
-                "maxTokenLifeMinutes" : "120",
-                "tokenIdleTimeMinutes" : "30",
                 "sessionOnly" : true,
-                "isHttpOnly" : true
+                "isHttpOnly" : true,
+                "maxTokenLifeMinutes" : "120",
+                "tokenIdleTimeMinutes" : "30"
             }
         },
         "authModules" : [
@@ -20,15 +20,29 @@
                 "properties" : {
                     "queryOnResource" : "repo/internal/user",
                     "username" : "anonymous",
-                    "password" : "anonymous",
-                    "defaultUserRoles" : [ "openidm-reg" ]
+                    "password" : {
+                        "$crypto" : {
+                            "type" : "x-simple-encryption",
+                            "value" : {
+                                "cipher" : "AES/CBC/PKCS5Padding",
+                                "salt" : "9pRuBAQ6dCKhr00DTMa3FA==",
+                                "data" : "OUmZqxnNfEfXtnwzUwOOsQ==",
+                                "iv" : "53t97z3AkiXKdBtlOrn2ug==",
+                                "key" : "openidm-sym-default",
+                                "mac" : "LG1XxaL0MjhVK8PzTRWk8A=="
+                            }
+                        }
+                    },
+                    "defaultUserRoles" : [
+                        "openidm-reg"
+                    ]
                 },
                 "enabled" : true
             },
             {
                 "name" : "MANAGED_USER",
                 "properties" : {
-                    "augmentSecurityContext": {
+                    "augmentSecurityContext" : {
                         "type" : "text/javascript",
                         "source" : "require('auth/customAuthz').setProtectedAttributes(security)"
                     },
@@ -41,7 +55,7 @@
                     },
                     "defaultUserRoles" : [ ]
                 },
-                "enabled" : false
+                "enabled" : true
             },
             {
                 "name" : "INTERNAL_USER",
@@ -57,10 +71,13 @@
                 },
                 "enabled" : true
             },
-            {   "name" : "CLIENT_CERT",
+            {
+                "name" : "CLIENT_CERT",
                 "properties" : {
                     "queryOnResource" : "security/truststore",
-                    "defaultUserRoles" : [ "openidm-cert" ],
+                    "defaultUserRoles" : [
+                        "openidm-cert"
+                    ],
                     "allowedAuthenticationIdPatterns" : [ ]
                 },
                 "enabled" : true
@@ -68,7 +85,7 @@
             {
                 "name" : "PASSTHROUGH",
                 "properties" : {
-                    "augmentSecurityContext": {
+                    "augmentSecurityContext" : {
                         "type" : "text/javascript",
                         "file" : "auth/populateAsManagedUser.js"
                     },
@@ -99,6 +116,57 @@
                     }
                 },
                 "enabled" : true
+            },
+            {
+                "name" : "OAUTH_CLIENT",
+                "properties" : {
+                    "augmentSecurityContext" : {
+                        "type" : "text/javascript",
+                        "globals" : {
+                            "sessionValidationBaseEndpoint" : "http://openam/openam/json/sessions/"
+                        },
+                        "file" : "auth/amSessionCheck.js"
+                    },
+                    "propertyMapping" : {
+                        "authenticationId" : "uid",
+                        "userRoles" : "authzRoles"
+                    },
+                    "defaultUserRoles" : [
+                        "openidm-authorized"
+                    ],
+                    "idpConfig" : {
+                        "provider" : "OPENAM",
+                        "icon" : "<button class=\"btn btn-lg btn-default btn-block btn-social-provider\"><img src=\"images/forgerock_logo.png\">Sign In</button>",
+                        "scope" : [
+                            "openid"
+                        ],
+                        "authenticationIdKey" : "sub",
+                        "clientId" : "openidm",
+                        "clientSecret" : {
+                            "$crypto" : {
+                                "type" : "x-simple-encryption",
+                                "value" : {
+                                    "cipher" : "AES/CBC/PKCS5Padding",
+                                    "salt" : "8pwG1vNaZgMzil4Agu7BSw==",
+                                    "data" : "1ZP8x/HSSU+VMH9+7cMg0w==",
+                                    "iv" : "JAwQbFwgyZN1uYiq+tF/mw==",
+                                    "key" : "openidm-sym-default",
+                                    "mac" : "wiSydRPM2mZAM19COe2qzA=="
+                                }
+                            }
+                        },
+                        "authorizationEndpoint" : "http://openam:80/openam/oauth2/authorize",
+                        "tokenEndpoint" : "http://openam:80/openam/oauth2/access_token",
+                        "endSessionEndpoint" : "http://openam:80/openam/oauth2/connect/endSession",
+                        "wellKnownEndpoint" : "http://openam/openam/oauth2/.well-known/openid-configuration",
+                        "redirectUri" : "http://openidm.nhsdigital.example.com/oauthReturn/",
+                        "configClass" : "org.forgerock.oauth.clients.oidc.OpenIDConnectClientConfiguration",
+                        "displayIcon" : "forgerock",
+                        "enabled" : true
+                    },
+                    "queryOnResource" : "system/ldap/account"
+                },
+                "enabled" : false
             }
         ]
     }

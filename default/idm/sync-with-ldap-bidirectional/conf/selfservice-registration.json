@@ -1,0 +1,64 @@
+{
+    "allInOneRegistration" : true,
+    "stageConfigs" : [
+        {
+            "name" : "parameters",
+            "parameterNames" : [
+                "returnParams"
+            ]
+        },
+        {
+            "name" : "emailValidation",
+            "identityEmailField" : "mail",
+            "emailServiceUrl" : "external/email",
+            "emailServiceParameters" : {
+                "waitForCompletion" : false
+            },
+            "from" : "info@example.com",
+            "subject" : "Register new account",
+            "mimeType" : "text/html",
+            "subjectTranslations" : {
+                "en" : "Register new account"
+            },
+            "messageTranslations" : {
+                "en" : "<h3>This is your registration email.</h3><h4><a href=\"%link%\">Email verification link</a></h4>"
+            },
+            "verificationLinkToken" : "%link%",
+            "verificationLink" : "http://openidm.nhsdigital.example.com/#register/"
+        },
+        {
+            "name" : "idmUserDetails",
+            "identityEmailField" : "mail",
+            "socialRegistrationEnabled" : false,
+            "registrationProperties" : [
+                "userName",
+                "givenName",
+                "sn",
+                "mail"
+            ],
+            "identityServiceUrl" : "managed/user",
+            "registrationPreferences" : [
+                "updates",
+                "marketing"
+            ]
+        },
+        {
+            "name" : "selfRegistration",
+            "identityServiceUrl" : "managed/user"
+        },
+        {
+            "name" : "localAutoLogin",
+            "identityUsernameField" : "userName",
+            "identityPasswordField" : "password",
+            "successUrl" : "http://openidm.nhsdigital.example.com/#dashboard/"
+        }
+    ],
+    "snapshotToken" : {
+        "type" : "jwt",
+        "jweAlgorithm" : "RSAES_PKCS1_V1_5",
+        "encryptionMethod" : "A128CBC_HS256",
+        "jwsAlgorithm" : "HS256",
+        "tokenExpiry" : "300"
+    },
+    "storage" : "stateless"
+}

@@ -170,7 +170,8 @@
                     "situation" : "UNASSIGNED",
                     "action" : "IGNORE"
                 }
-            ]
+            ],
+            "enableSync" : true
         }
     ]
 }
