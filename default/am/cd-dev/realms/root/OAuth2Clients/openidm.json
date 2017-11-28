@@ -3,11 +3,11 @@
     "realm" : "/",
     "amsterVersion" : "5.5.0",
     "entityType" : "OAuth2Clients",
-    "entityId" : "nhsdigital",
+    "entityId" : "openidm",
     "pathParams" : { }
   },
   "data" : {
-    "_id" : "nhsdigital",
+    "_id" : "openidm",
     "signEncOAuth2ClientConfig" : {
       "idTokenEncryptionMethod" : "A128CBC-HS256",
       "jwkSet" : null,
@@ -35,7 +35,7 @@
       "mixUpMitigation" : false,
       "tokenEndpointAuthMethod" : "client_secret_basic",
       "sectorIdentifierUri" : null,
-      "isConsentImplied" : false,
+      "isConsentImplied" : true,
       "contacts" : [ ],
       "responseTypes" : [ "code", "token", "id_token", "code token", "token id_token", "code id_token", "code token id_token", "device_code", "device_code id_token" ],
       "descriptions" : [ ],
@@ -45,23 +45,23 @@
     "coreOpenIDClientConfig" : {
       "jwtTokenLifetime" : 0,
       "clientSessionUri" : null,
-      "postLogoutRedirectUri" : [ ],
+      "postLogoutRedirectUri" : [ "http://openidm.nhsdigital.example.com/", "http://openidm.nhsdigital.example.com/admin/" ],
       "defaultMaxAge" : 600,
       "claims" : [ ],
       "defaultMaxAgeEnabled" : false
     },
     "coreOAuth2ClientConfig" : {
       "userpassword" : null,
-      "userpassword-encrypted" : "AAAAA0FFUwIQVR3McutpEH1x7CVwYxi/iC58CtKYI8nhCRIus9WYa+t30RgenC3KoQ==",
+      "userpassword-encrypted" : "AAAAA0FFUwIQgXVoBePQzoT8ZobLlUYTNA8CQaHh8CxHJncNYgfMdEY7Ng/ZQcSyEg==",
       "authorizationCodeLifetime" : 0,
       "accessTokenLifetime" : 0,
-      "defaultScopes" : [ "openid", "profile", "email" ],
+      "defaultScopes" : [ ],
       "clientName" : [ ],
       "clientType" : "Confidential",
-      "scopes" : [ "openid", "profile", "email" ],
+      "scopes" : [ "openid" ],
       "agentgroup" : null,
       "refreshTokenLifetime" : 0,
-      "redirectionUris" : [ "http://localhost:9000/login" ],
+      "redirectionUris" : [ "http://openidm.nhsdigital.example.com/oauthReturn/" ],
       "status" : "Active"
     },
     "coreUmaClientConfig" : {

@@ -16,7 +16,7 @@
       "passwordTransformClass" : "com.sun.identity.authentication.modules.jdbc.ClearTextTransform",
       "connectionPoolJndiName" : "java:comp/env/jdbc/samplePool",
       "password" : null,
-      "password-encrypted" : "AAAAA0FFUwIQHDtZYTZSbiB5nnJITx2e22gjDTtCazZDND4vuaHu+2u0P3q6fSBE3Q==",
+      "password-encrypted" : "AAAAA0FFUwIQTRrUdIwqkBMs57+z9ivEGSwRyjVF9BQfQ2227GzqO808t8AtFtIpVQ==",
       "jdbcDriver" : "com.mysql.jdbc.Driver",
       "passwordColumn" : "PASSWORD_COLUMN",
       "authenticationLevel" : 0
